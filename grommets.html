@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link rel="icon" type="image/x-icon" href="Pictures/favicon.png">    
+        <link rel="stylesheet" href="style.css">
+        <a href="index.html"><h1>Grommets</h1></a>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010074E1646AEC49D243943F95C343AA8B8A</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="screws.html">Screws</a>
+        <a href="bolts.html">Bolts</a>
+        <a href="washers.html">Washers</a>
+        <a href="nuts.html">Nuts</a>
+        <a href="springs.html">Springs</a>
+        <a href="pins.html">Pins</a>
+        <a href="rivets.html">Rivets</a>
+        <a href="spacers.html">Spacers</a>
+        <a href="magnets.html">Magnets</a>
+        <a href="grommets.html">Grommets</a>
+        <a href="wire_terminals.html">Wire Terminals</a>
+        <a href="other.html">Other</a>
+    </header>   
+
+    <a href="grommets.html"><img src="Pictures/DIM%20Pics/GROMMET%20DIMS.jpg" alt="grommets" style="width: 650px;">
+
+    <div><h2 style="padding-top: 25px;">Output</h2></div>
+    <div><p id="output"></p></div>
+    <div><h3>Part Code</h3></div>
+    <div><p id="partNum" style="padding-bottom: 25px;"></p></div>
+
+
+    <div style="position: relative; display: inline-block;">
+        <button class="resetbtn filter-button" onclick="resetFunction" data-filter="all">Reset</button>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn" id="show">Sleeve OD</button>
+        <div class="dropdown-content">
+            <a href="#" id="HT1" onclick="selectedHT1()" class="filter-button" data-filter="pan">0.313"</a>
+            <a href="#" id="HT2" onclick="selectedHT2()" class="filter-button" data-filter="round">0.75"</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn" id="show">Flange OD</button>
+        <div class="dropdown-content">
+            <a href="#" id="HT1" onclick="selectedHT1()" class="filter-button" data-filter="pan">0.5"</a>
+            <a href="#" id="HT2" onclick="selectedHT2()" class="filter-button" data-filter="round">0.781"</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn" id="show">Flange ID</button>
+        <div class="dropdown-content">
+            <a href="#" id="HT1" onclick="selectedHT1()" class="filter-button" data-filter="pan">0.188"</a>
+            <a href="#" id="HT2" onclick="selectedHT2()" class="filter-button" data-filter="round">0.495"</a>
+        </div>
+    </div>
+
+</body>
+</html>
+

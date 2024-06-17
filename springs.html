@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link rel="icon" type="image/x-icon" href="Pictures/favicon.png">    
+        <link rel="stylesheet" href="style.css">
+        <a href="index.html"><h1>Springs</h1></a>    
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010074E1646AEC49D243943F95C343AA8B8A</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <header>
+        <a href="index.html">Home</a>
+        <a href="screws.html">Screws</a>
+        <a href="bolts.html">Bolts</a>
+        <a href="washers.html">Washers</a>
+        <a href="nuts.html">Nuts</a>
+        <a href="springs.html">Springs</a>
+        <a href="pins.html">Pins</a>
+        <a href="rivets.html">Rivets</a>
+        <a href="spacers.html">Spacers</a>
+        <a href="magnets.html">Magnets</a>
+        <a href="grommets.html">Grommets</a>
+        <a href="wire_terminals.html">Wire Terminals</a>
+        <a href="other.html">Other</a>
+    </header>   
+
+    <div style="float: right; padding-right: 250px;">
+        <button class="filter-button" data-filter="all">All</button>
+        <input type="text" id="filterInput" placeholder="Filter">
+        <ul id="list" style="width:500px; overflow: auto; max-height: 725px; padding-right: 100px; list-style-type: square;">
+            <li class='compression 4"' id="H00165"><p>H00165    SPRING, COMPRESSION, 4" L</p></li>
+            <li class='compression 1.25"' id="H00196"><p>H00196    SPRING, COMPRESSION, 1.25"L</p></li>
+            <li class='compression 3/4"' id="H00224"><p>H00224    SPRING, COMPRESSION, 3/4" L</p></li>
+            <li class='compression 1.5"' id="H00342"><p>H00342    SPRING, COMPRESSION, 1.5" L</p></li>
+            <li class='torsion 270 right rh 0.417"' id="H00343"><p>H00343    SPRING, TORSION, 270º, RH WOUND, 0.417" O.D</p></li>
+        </ul>
+        </div>
+        
+        <img src="Pictures/DIM Pics/Spring Dim.jpg" alt="screw-dim" style="width: 650px; padding-left: 75px; ">
+    
+        <div style="float: left; padding-left: 100px;">    
+            <div><h2 style="padding-top: 25px;">Output</h2></div>
+            <div><p id="output"></p></div>
+            <div><h3>Part Code</h3></div>  
+            <div><p id="partNum" style="padding-bottom: 25px;"></p></div>
+        <div style="float: left;">
+    
+        <div style="position: relative; display: inline-block;">
+            <button class="resetbtn filter-button" onclick="resetFunction()" data-filter="all">Reset</button>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn" id="show">Type</button>
+            <div class="dropdown-content">
+                <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="compression">Compression</a>
+                <a href="#" id="T2" onclick="selectedT2()" class="filter-button" data-filter="torsion">Torsion</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Angle</button>
+            <div class="dropdown-content">
+                <a href="#" id="A1" onclick="selectedA1()" class="filter-button" data-filter="270">270º</a>
+            </div>
+        </div>        
+        
+        <div class="dropdown">
+            <button class="dropbtn">Side</button>
+            <div class="dropdown-content">
+                <a href="#" id="S1" onclick="selectedS1()" class="filter-button" data-filter="left lh">Left</a>
+                <a href="#" id="S2" onclick="selectedS2()" class="filter-button" data-filter="right rh">Right</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Outer Dim</button>
+            <div class="dropdown-content">
+                <a href="#" id="O1" onclick="selectedO1()" class="filter-button" data-filter='0.417"'>0.417"</a>
+            </div>
+        </div>
+
+    <div style="padding-top: 5px;">
+        <div class="dropdown">
+            <button class="dropbtn">Length</button>
+            <div class="dropdown-content">
+                <a href="#" id="L2" onclick="selectedL2()" class="filter-button" data-filter='3/4"'>3/4"</a>
+                <a href="#" id="L3" onclick="selectedL3()" class="filter-button" data-filter='1.25"'>1.25"</a>
+                <a href="#" id="L4" onclick="selectedL4()" class="filter-button" data-filter='1.5"'>1.5"</a>
+                <a href="#" id="L5" onclick="selectedL5()" class="filter-button" data-filter='4"'>4"</a>
+            </div>
+        </div>
+    
+        <div style="position: relative; display: inline-block;"><button class="enterbtn" onclick= "sortEnter()">Enter</button></div> 
+    </div> 
+    </div>
+    </div>
+       
+    <script>
+    // Get the filter input and list elements
+    const filterInput = document.getElementById('filterInput');
+    const list = document.getElementById('list');
+    
+    // Add event listener for filter input
+    filterInput.addEventListener('input', filterList);
+    
+    // Function to filter the list based on the filter input
+    function filterList() {
+      const filterValue = filterInput.value.toLowerCase();
+      const items = list.getElementsByTagName('li');
+      
+      Array.from(items).forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(filterValue)) {
+          item.style.display = 'block'; // Show the item
+        } else {
+          item.style.display = 'none'; // Hide the item
+        }
+      });
+    }
+    // Get the filter buttons and list elements
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const listItems = document.querySelectorAll('#list li');
+    
+    // Add event listener for each filter button
+    filterButtons.forEach(button => {
+      button.addEventListener('click', applyFilter);
+    });
+    
+    // Function to apply the filter
+    function applyFilter() {
+      // Get the filter value from the data attribute
+      const filterValue = this.dataset.filter;
+    
+      // Show or hide items based on the filter value
+      listItems.forEach(item => {
+        if (filterValue === 'all') {
+          item.classList.remove('hide'); // Show all items
+        } else if (item.classList.contains(filterValue)) {
+          item.classList.remove('hide'); // Show matching items
+        } else {
+          item.classList.add('hide'); // Hide non-matching items
+        }
+      });
+    
+      // Remove active class from all buttons and add it to the clicked button
+      filterButtons.forEach(button => {
+        button.classList.remove('active');
+      });
+      this.classList.add('active');
+    };
+    
+        <!--variables for screws-->
+        var angle = "?";
+        var length = "?";
+        var side = "?";
+        var type = "?";
+        var code = "?????";
+            
+        function update() {
+            document.getElementById("output").innerHTML = 
+            "SPRING," + " " + type + " " + angle + " " + side + " " + length;
+            document.getElementById("partNum").innerHTML = 
+            code;
+        };
+       
+        update();
+    
+        function resetFunction(){
+            type = "?";
+            length = "?";
+            angle = "?";
+            side = "?";
+            code = "??????";
+            update();
+        };
+    
+        resetFunction();    
+
+        function sortEnter(){
+            if (type === 'COMPRESSION' && angle === '?' && side === '?' && length === '3/4"'){
+                code = 'H00224';
+                update();
+            }else if (type === 'COMPRESSION' && angle === '?' && side === '?' && length === '1.25"'){
+                code = 'H00196';
+                update();            
+            }else if (type === 'COMPRESSION' && angle === '?' && side === '?' && length === '4"'){
+                code = 'H00165';
+                update();
+            }else if (type === 'TORSION' && angle === '270º' && side === 'RH' && length === '?'){
+                code = 'H00343';
+                update();
+            }else if (type === 'COMPRESSION' && angle === '?' && side === '?' && length === '1.5"'){
+                code = 'H00342';
+                update();
+            }else
+                code = "xxxxx";
+                update();
+        };
+    
+        function  selectedT1() {
+            type = "COMPRESSION"; 
+            update();
+        }; 
+        
+        function  selectedT2() {
+            type = "TORSION"; 
+            update();
+        }; 
+        
+        function  selectedA1() {
+            angle = "270º"; 
+            update();
+        };
+
+        function  selectedS1() {
+            side = "L"; 
+            update();
+        };        
+        
+        function  selectedS2() {
+            side = "RH"; 
+            update();
+        };     
+
+        function  selectedL2() {
+            length = '3/4"'; 
+            update();
+        };         
+        
+        function  selectedL3() {
+            length = '1.25"'; 
+            update();
+        }; 
+        
+        function  selectedL4() {
+            length = '1.5"'; 
+            update();
+        }; 
+        
+        function  selectedL5() {
+            length = '4"'; 
+            update();
+        }; 
+
+    </script>
+    
+    </body>
+    </html>

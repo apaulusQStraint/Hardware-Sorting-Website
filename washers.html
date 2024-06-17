@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link rel="icon" type="image/x-icon" href="Pictures/favicon.png">    
+        <link rel="stylesheet" href="style.css">
+        <a href="index.html"><h1>Washers</h1></a>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010074E1646AEC49D243943F95C343AA8B8A</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <header>
+        <a href="index.html">Home</a>
+        <a href="screws.html">Screws</a>
+        <a href="bolts.html">Bolts</a>
+        <a href="washers.html">Washers</a>
+        <a href="nuts.html">Nuts</a>
+        <a href="springs.html">Springs</a>
+        <a href="pins.html">Pins</a>
+        <a href="rivets.html">Rivets</a>
+        <a href="spacers.html">Spacers</a>
+        <a href="magnets.html">Magnets</a>
+        <a href="grommets.html">Grommets</a>
+        <a href="wire_terminals.html">Wire Terminals</a>
+        <a href="other.html">Other</a>
+    </header>   
+
+    <div style="float: right; padding-right: 250px; padding-left: 250px;">
+    <button class="filter-button" data-filter="all">All</button>
+    <input type="text" id="filterInput" placeholder="Filter">
+        <ul id="list" style="width:500px; overflow: auto; max-height: 725px; padding-right: 100px; list-style-type: square;">
+          <li class='flat m20' id="H00161"><p>H00161  WASHER, FLAT, M20</p></li>
+          <li class='flat 0.63" 0.286"' id="H00175"><p>H00175  WASHER, FLAT, 0.63"OD, 0.286" ID</p></li>
+          <li class='sleeve flanged 0.32x0.62x0.625' id="H00197"><p>H00197  WASHER, SLEEVE FLANGED 0.32x0.62x0.625 Z</p></li>
+          <li class='flat 0.203" 0.63"' id="H00206"><p>H00206  WASHER, FLAT, 0.203" I.D, 0.63" O.D</p></li>
+          <li class='flat 1.25" 0.219"' id="H00340"><p>H00340  WASHER, FLAT, OVERSIZED, 1.25" OD, 0.219" ID</p></li>
+          <li class='nylon 0.312" 0.5"' id="H10525"><p>H10525  WASHER, NYLON, 0.312" ID, 0.5" OD</p></li>
+          <li class='flat 0.281" 0.734"' id="H10586"><p>H10586  WASHER, FLAT, 0.281" ID,  0.734" OD</p></li>
+          <li class='m10 10.9' id="H60017"><p>H60017  WASHER, M10 GR 10.9</p></li>
+          <li class='flat 13mm 24mm' id="H60020"><p>H60020  WASHER, FLAT, 13mm I.D, 24mm O.D</p></li>
+          <li class='0.4x0.82 ss"' id="QC98047"><p>QC98047  WASHER, 0.4x0.82 SS</p></li>
+          <li class='0.47x95 carb st' id="Q5-6511-M"><p>Q5-6511-M  WASHER, 0.47x.95 CARB ST</p></li>
+    </ul>
+    </div>
+    
+    <ul style="overflow: auto; max-height: 350px; list-style-type: none;">
+      <li><img src="Pictures/DIM Pics/Washer Dim.jpg" alt="washer-dim" style="width: 650px;"></li>
+      <li><img src="Pictures/DIM Pics/Washer Dim 2.JPG" alt="washer-dim" style="width: 650px; "></li>
+    </ul>
+
+  <div style="float: left; padding-left: 100px; height: 300px;">    
+      <div><h2 style="padding-top: 25px;">Output</h2></div>
+      <div><p id="output"></p></div>
+      <div><h3>Part Code</h3></div>  
+      <div><p id="partNum" style="padding-bottom: 25px;"></p></div>
+    <div style="float: left;">
+
+      <div style="position: relative; display: inline-block;">
+          <button class="resetbtn filter-button" onclick="resetFunction()" data-filter="all">Reset</button>
+      </div>
+
+    <div class="dropdown">
+        <button class="dropbtn" id="show">Type</button>
+        <div class="dropdown-content">
+            <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="flat">Flat</a>
+            <a href="#" id="T2" onclick="selectedT2()" class="filter-button" data-filter="sleeve">Sleeve</a>
+            <a href="#" id="T3" onclick="selectedT3()" class="filter-button" data-filter="nylon">Nylon Spacer</a>
+            <a href="#" id="T4" onclick="selectedT4()" class="filter-button" data-filter="finishing">Finishing</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Dimension</button>
+      <div class="dropdown-content">
+        <a href="#" id="D" onclick="selectedD()" class="filter-button" data-filter=''>M10</a>
+        <a href="#" id="D" onclick="selectedD()" class="filter-button" data-filter=''>M20</a>
+        <a href="#" id="D" onclick="selectedD()" class="filter-button" data-filter=''></a>
+        <a href="#" id="D" onclick="selectedD()" class="filter-button" data-filter=''></a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Inner Dim</button>
+      <div class="dropdown-content">
+          <a href="#" id="ID1" onclick="selectedID1()" class="filter-button" data-filter='0.203"'>0.203"</a>
+          <a href="#" id="ID2" onclick="selectedID2()" class="filter-button" data-filter='0.219"'>0.219"</a>
+          <a href="#" id="ID3" onclick="selectedID3()" class="filter-button" data-filter='0.281"'>0.281"</a>
+          <a href="#" id="ID4" onclick="selectedID4()" class="filter-button" data-filter='0.286"'>0.286"</a>
+          <a href="#" id="ID5" onclick="selectedID5()" class="filter-button" data-filter='0.312"'>0.312"</a>
+          <a href="#" id="ID6" onclick="selectedID6()" class="filter-button" data-filter='13mm'>13mm</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Outer Dim</button>
+      <div class="dropdown-content">
+        <a href="#" id="OD1" onclick="selectedOD1()" class="filter-button" data-filter='0.5"'>0.5"</a>
+        <a href="#" id="OD2" onclick="selectedOD2()" class="filter-button" data-filter='0.63"'>0.63"</a>
+        <a href="#" id="OD3" onclick="selectedOD3()" class="filter-button" data-filter='0.734"'>0.734"</a>
+        <a href="#" id="OD4" onclick="selectedOD4()" class="filter-button" data-filter='24mm'>24mm</a>
+        <a href="#" id="OD5" onclick="selectedOD5()" class="filter-button" data-filter='1.25"'>1.25"</a>
+      </div>
+    </div>
+  
+    <div style="padding-top: 5px;"> 
+      <div class="dropdown">
+        <button class="dropbtn">Thickness</button>
+        <div class="dropdown-content">
+            <a href="#" id="TH1" onclick="selectedTH1()" class="filter-button" data-filter=''></a>
+        </div>
+      </div>
+
+  
+      <div class="dropdown">
+        <button class="dropbtn">Grade</button>
+        <div class="dropdown-content">
+            <a href="#" id="G1" onclick="selectedG1()" class="filter-button" data-filter='10.9'>10.9</a>
+            <a href="#" id="G" onclick="selectedG()" class="filter-button" data-filter=''></a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Material</button>
+        <div class="dropdown-content">
+            <a href="#" id="M" onclick="selectedM()" class="filter-button" data-filter=''></a>
+        </div>
+      </div>
+
+      <div style="position: relative; display: inline-block;"><button class="enterbtn" onclick= "sortEnter()">Enter</button></div> 
+    </div> 
+  </div>
+</div>
+
+<script>
+// Get the filter input and list elements
+const filterInput = document.getElementById('filterInput');
+const list = document.getElementById('list');
+
+// Add event listener for filter input
+filterInput.addEventListener('input', filterList);
+
+// Function to filter the list based on the filter input
+function filterList() {
+  const filterValue = filterInput.value.toLowerCase();
+  const items = list.getElementsByTagName('li');
+  
+  Array.from(items).forEach(item => {
+    const text = item.textContent.toLowerCase();
+    if (text.includes(filterValue)) {
+      item.style.display = 'block'; // Show the item
+    } else {
+      item.style.display = 'none'; // Hide the item
+    }
+  });
+}
+// Get the filter buttons and list elements
+const filterButtons = document.querySelectorAll('.filter-button');
+const listItems = document.querySelectorAll('#list li');
+
+// Add event listener for each filter button
+filterButtons.forEach(button => {
+  button.addEventListener('click', applyFilter);
+});
+
+// Function to apply the filter
+function applyFilter() {
+  // Get the filter value from the data attribute
+  const filterValue = this.dataset.filter;
+
+  // Show or hide items based on the filter value
+  listItems.forEach(item => {
+    if (filterValue === 'all') {
+      item.classList.remove('hide'); // Show all items
+    } else if (item.classList.contains(filterValue)) {
+      item.classList.remove('hide'); // Show matching items
+    } else {
+      item.classList.add('hide'); // Hide non-matching items
+    }
+  });
+
+  // Remove active class from all buttons and add it to the clicked button
+  filterButtons.forEach(button => {
+    button.classList.remove('active');
+  });
+  this.classList.add('active');
+};
+
+    <!--variables for screws-->
+    var type = "?";
+    var diameter = '?';
+    var inner = "?";
+    var outer = "?";
+    var thick = "?";
+    var grade = '?';
+    var code = "?????";
+        
+    function update() {
+        document.getElementById("output").innerHTML = 
+        "WASHER," + " " + type + ", " + inner + ", " + outer + ", " + thick + ", " + grade;
+        document.getElementById("partNum").innerHTML = 
+        code;
+    };
+
+    update();
+
+    function resetFunction(){
+        type = "?";
+        diameter = '?';
+        inner = "?";
+        outer = "?";
+        thick = "?";
+        grade = '?';
+        code = "??????";
+        update();
+    };
+
+    resetFunction();
+   
+    function sortEnter(){
+        if (type === 'FLAT' && inner === '0.286" ID' && outer === '0.63" OD'){
+            code = 'H00161';
+            update();
+          }else if (type === 'FLAT' && inner === '' && outer === '' && thick && '?' ){
+            code = 'H00175';
+            update();
+          }else if (type === 'SLEEVE FLANGED' && inner === '' && outer === '' && thick && '?' ){
+            code = 'H00197';
+            update();
+          }else if (type === 'FLAT' && inner === '0.203" ID' && outer === '0.63" OD' && thick && '?' ){
+            code = 'H00206';
+            update();
+          }else if (type === 'FLAT' && inner === '0.219" ID' && outer === '1.25" OD' && thick && '?' ){
+            code = 'H00340';
+            update();
+          }else if (type === 'NYLON' && inner === '0.312" ID' && outer === '0.5" OD' && thick && '?' ){
+            code = 'H10525';
+            update();
+          }else if (type === 'FLAT' && inner === '0.281" ID' && outer === '0.734" OD' && thick && '?' ){
+            code = 'H10586';
+            update();
+          }else if (type === '' && diameter === 'M10' && grade === '' ){
+            code = 'H60017';
+            update();
+          }else if (type === 'FLAT' && inner === '13mm ID' && outer === '24mm OD'){
+            code = 'H60020';
+            update();
+          }else if (type === '' && inner === '' && outer === '' && thick && '?' ){
+            code = 'QC98047';
+            update();
+          }else if (type === '' && inner === '' && outer === '' && thick && '?' ){
+            code = 'Q5-6511-M';
+            update();
+        }else
+            code = "xxxxx";
+            update();
+    };
+
+    function  selectedT1() {
+        type = "FLAT"; 
+        update();
+    };
+
+    function  selectedT2() {
+        type = "SLEEVE FLANGED"; 
+        update();
+    };
+
+    function  selectedT3() {
+        type = "NYLON"; 
+        update();
+    };
+
+    function  selectedT4() {
+        type = "FINISHING"; 
+        update();
+    };
+
+    function  selectedID1() {
+        inner = '0.203" ID'; 
+        update();
+    };
+
+    function  selectedID2() {
+        inner = '0.219" ID'; 
+        update();
+    };
+
+    function  selectedID3() {
+        inner = '0.281" ID'; 
+        update();
+    };
+
+    function  selectedID4() {
+        inner = '0.286" ID'; 
+        update();
+    };
+
+    function  selectedID5() {
+        inner = '0.312" ID'; 
+        update();
+    };
+
+    function  selectedID6() {
+        inner = '13mm ID'; 
+        update();
+    };
+
+    function  selectedOD1() {
+        outer = '0.5" OD'; 
+        update();
+    };
+    
+    function  selectedOD2() {
+        outer = '0.63" OD'; 
+        update();
+    };
+
+    function  selectedOD3() {
+        outer = '0.734" OD'; 
+        update();
+    };
+
+    function  selectedOD4() {
+        outer = '24mm OD'; 
+        update();
+    };
+
+    function  selectedOD5() {
+        outer = '1.25" OD'; 
+        update();
+    };
+
+    function  selectedG1() {
+        grade = 'GR 10.9'; 
+        update();
+    };
+
+</script>
+
+</body>
+</html>

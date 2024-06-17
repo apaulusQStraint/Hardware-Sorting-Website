@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link rel="icon" type="image/x-icon" href="Pictures/favicon.png">    
+        <link rel="stylesheet" href="style.css">
+        <a href="index.html"><h1>Spacers</h1></a>    
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010074E1646AEC49D243943F95C343AA8B8A</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <header>
+        <a href="index.html">Home</a>
+        <a href="screws.html">Screws</a>
+        <a href="bolts.html">Bolts</a>
+        <a href="washers.html">Washers</a>
+        <a href="nuts.html">Nuts</a>
+        <a href="springs.html">Springs</a>
+        <a href="pins.html">Pins</a>
+        <a href="rivets.html">Rivets</a>
+        <a href="spacers.html">Spacers</a>
+        <a href="magnets.html">Magnets</a>
+        <a href="grommets.html">Grommets</a>
+        <a href="wire_terminals.html">Wire Terminals</a>
+        <a href="other.html">Other</a>
+    </header>   
+
+    <div style="float: right; padding-right: 250px; padding-left: 250px;">
+        <button class="filter-button" data-filter="all">All</button>
+        <input type="text" id="filterInput" placeholder="Filter">
+        <ul id="list" style="width:500px; overflow: auto; max-height: 725px; padding-right: 100px; list-style-type: square;">
+            <li class='unthreaded 0.375 0.194 3/32' id="H00333"><p>H00333    UNTHREADED SPACER, OD 0.375, ID 0.194, 3/32 THK.</p></li>
+            <li class='unthreaded 0.375 0.192 5/32' id="H00334"><p>H00334    UNTHREADED SPACER, OD 0.375, ID 0.192, 5/32 THK.</p></li>
+            <li class='unthreaded 0.5 0.194 3/4' id="H00335"><p>H00335    UNTHREADED SPACER, OD 0.5, ID 0.194, 3/4 THK.</p></li>
+        </ul>
+        </div>
+        
+        <img src="Pictures/DIM Pics/Spacer Dim.jpg" alt="screw-dim" style="width: 650px; padding-left: 75px; ">
+    
+        <div style="float: left; padding-left: 100px;">    
+            <div><h2 style="padding-top: 25px;">Output</h2></div>
+            <div><p id="output"></p></div>
+            <div><h3>Part Code</h3></div>  
+            <div><p id="partNum" style="padding-bottom: 25px;"></p></div>
+        <div style="float: left;">
+    
+        <div style="position: relative; display: inline-block;">
+            <button class="resetbtn filter-button" onclick="resetFunction()" data-filter="all">Reset</button>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn" id="show">Type</button>
+            <div class="dropdown-content">
+                <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="unthreaded">Unthreaded</a>
+            </div>
+        </div>
+    
+        <div class="dropdown">
+            <button class="dropbtn">Outer Dim</button>
+            <div class="dropdown-content">
+                <a href="#" id="OD1" onclick="selectedOD1()" class="filter-button" data-filter="0.375">0.375</a>
+                <a href="#" id="OD2" onclick="selectedOD2()" class="filter-button" data-filter="0.5">0.5</a>
+            </div>
+        </div>        
+        
+        <div class="dropdown">
+            <button class="dropbtn">Inner Dim</button>
+            <div class="dropdown-content">
+                <a href="#" id="ID1" onclick="selectedID1()" class="filter-button" data-filter="0.192">0.192</a>
+                <a href="#" id="ID2" onclick="selectedID2()" class="filter-button" data-filter="0.194">0.194</a>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropbtn">Thickness</button>
+            <div class="dropdown-content">
+                <a href="#" id="TH1" onclick="selectedTH1()" class="filter-button" data-filter='3/32'>3/32</a>
+                <a href="#" id="TH2" onclick="selectedTH2()" class="filter-button" data-filter='5/32'>5/32</a>
+                <a href="#" id="TH3" onclick="selectedTH3()" class="filter-button" data-filter='3/4'>3/4</a>
+            </div>
+        </div>
+    
+        <div style="position: relative; display: inline-block;"><button class="enterbtn" onclick= "sortEnter()">Enter</button></div> 
+    </div> 
+    </div>
+       
+    <script>
+    // Get the filter input and list elements
+    const filterInput = document.getElementById('filterInput');
+    const list = document.getElementById('list');
+    
+    // Add event listener for filter input
+    filterInput.addEventListener('input', filterList);
+    
+    // Function to filter the list based on the filter input
+    function filterList() {
+      const filterValue = filterInput.value.toLowerCase();
+      const items = list.getElementsByTagName('li');
+      
+      Array.from(items).forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(filterValue)) {
+          item.style.display = 'block'; // Show the item
+        } else {
+          item.style.display = 'none'; // Hide the item
+        }
+      });
+    }
+    // Get the filter buttons and list elements
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const listItems = document.querySelectorAll('#list li');
+    
+    // Add event listener for each filter button
+    filterButtons.forEach(button => {
+      button.addEventListener('click', applyFilter);
+    });
+    
+    // Function to apply the filter
+    function applyFilter() {
+      // Get the filter value from the data attribute
+      const filterValue = this.dataset.filter;
+    
+      // Show or hide items based on the filter value
+      listItems.forEach(item => {
+        if (filterValue === 'all') {
+          item.classList.remove('hide'); // Show all items
+        } else if (item.classList.contains(filterValue)) {
+          item.classList.remove('hide'); // Show matching items
+        } else {
+          item.classList.add('hide'); // Hide non-matching items
+        }
+      });
+    
+      // Remove active class from all buttons and add it to the clicked button
+      filterButtons.forEach(button => {
+        button.classList.remove('active');
+      });
+      this.classList.add('active');
+    };
+    
+        <!--variables for screws-->
+        var type = "?";
+        var outer = '?';
+        var inner = '?';
+        var thick = "?";
+        var code = "?????";
+            
+        function update() {
+            document.getElementById("output").innerHTML = 
+            type + " SPACER," + " " + "OD" + ' ' + outer + ", " + "ID" + " " + inner + ", " + thick + " " + 'THK';
+            document.getElementById("partNum").innerHTML = 
+            code;
+        };
+       
+        update();
+    
+        function resetFunction(){
+            type = "?";
+            outer = '?';
+            inner = '?';
+            thick = "?";
+            code = "??????";
+            update();
+        };
+    
+        resetFunction();    
+        
+        function sortEnter(){
+            if (type === 'UNTHREADED' && outer === '0.375' && inner === '0.194' && thick === '3/32'){
+                code = 'H00333';
+                update();
+            }else if (type === 'UNTHREADED' && outer === '0.375' && inner === '0.192' && thick === '5/32'){
+                code = 'H00334';
+                update();            
+            }else if (type === 'UNTHREADED' && outer === '0.5' && inner === '0.194' && thick === '3/4'){
+                code = 'H00335';
+                update();
+            }else
+                code = "xxxxx";
+                update();
+        };
+    
+        function  selectedT1() {
+            type = "UNTHREADED"; 
+            update();
+        };         
+        
+        function  selectedT2() {
+            type = "UNTHREADED"; 
+            update();
+        };         
+
+        function  selectedT3() {
+            type = "UNTHREADED"; 
+            update();
+        };         
+
+        function  selectedOD1() {
+            outer = "0.375"; 
+            update();
+        };    
+        
+        function  selectedOD2() {
+            outer = "0.5"; 
+            update();
+        };  
+        
+        function  selectedID1() {
+            inner = "0.192"; 
+            update();
+        }; 
+        
+        function  selectedID2() {
+            inner = "0.194"; 
+            update();
+        }; 
+        
+        function  selectedTH1() {
+            thick = "3/32"; 
+            update();
+        }; 
+
+        function  selectedTH2() {
+            thick = "5/32"; 
+            update();
+        }; 
+
+        function  selectedTH3() {
+            thick = "3/4"; 
+            update();
+        }; 
+
+        
+
+    </script>
+    
+    </body>
+    </html>

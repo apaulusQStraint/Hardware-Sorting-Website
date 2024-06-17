@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link rel="icon" type="image/x-icon" href="Pictures/favicon.png">    
+        <link rel="stylesheet" href="style.css">    
+        <a href="index.html"><h1>Bolts</h1></a>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x01010074E1646AEC49D243943F95C343AA8B8A</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <header>
+        <a href="index.html">Home</a>
+        <a href="screws.html">Screws</a>
+        <a href="bolts.html">Bolts</a>
+        <a href="washers.html">Washers</a>
+        <a href="nuts.html">Nuts</a>
+        <a href="springs.html">Springs</a>
+        <a href="pins.html">Pins</a>
+        <a href="rivets.html">Rivets</a>
+        <a href="spacers.html">Spacers</a>
+        <a href="magnets.html">Magnets</a>
+        <a href="grommets.html">Grommets</a>
+        <a href="wire_terminals.html">Wire Terminals</a>
+        <a href="other.html">Other</a>
+    </header>   
+
+    <div style="float: right; padding-right: 250px; padding-left: 250px;">
+    <button class="filter-button" data-filter="all">All</button>
+    <input type="text" id="filterInput" placeholder="Filter">
+        <ul id="list" style="width:500px; overflow: auto; max-height: 725px; padding-right: 100px; list-style-type: square;">
+          <li class='pa"' id="H00198"><p>H00198   BOLT, CARRIAGE, 5/16"-18 THREAD, 4.95"L</p></li>
+          <li class='pa"' id="H00246"><p>H00246   BOLT, CARRIEAGE, 5/16"-18 THREAD, 4.5" LG</p></li>
+          <li class='pa"' id="H10122"><p>H10122   BOLT HEX 1/4-20 X 1 1/2</p></li>
+          <li class='pa"' id="H10195"><p>H10195   SOCKET BUTTON HEAD BOLT. 1/4" - 20 X 2"LG</p></li>
+          <li class='pa"' id="H10528"><p>H10528   BOLT HEX 5/16-18 X 3-1/2" GR8</p></li>
+          <li class='pa"' id="H10529"><p>H10529   BOLT HEX 5/16-18 X 5" GR8</p></li>
+          <li class='pa"' id="Q04C1352"><p>Q04C1352   SOCKET BUTTON HEAD BOLT, 1/4" - 20 X 2.5" LG</p></li>
+          <li class='pa"' id="Q5-6509-1"><p>Q5-6509-1   BOLT HEX SKT RND 3/8-16X1L ST</p></li>
+    </ul>
+    </div>
+    
+    <ul style="overflow: auto; max-height: 350px; list-style-type: none;">
+      <li><img src="Pictures/DIM Pics/Bolt Dim.JPG" alt="bolt-dim" style="width: 650px; "></li>
+      <li><img src="Pictures/DIM Pics/Bolt Dim 2.JPG" alt="bolt-dim" style="width: 650px; "></li>
+    </ul>
+
+  <div style="float: left; padding-left: 100px; height: 300px;">    
+      <div><h2 style="padding-top: 25px;">Output</h2></div>
+      <div><p id="output"></p></div>
+      <div><h3>Part Code</h3></div>  
+      <div><p id="partNum" style="padding-bottom: 25px;"></p></div>
+    <div style="float: left;">
+
+      <div style="position: relative; display: inline-block;">
+          <button class="resetbtn filter-button" onclick="resetFunction()" data-filter="all">Reset</button>
+      </div>
+
+      <div class="dropdown">
+          <button class="dropbtn" id="show">Type</button>
+          <div class="dropdown-content">
+            <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="carriage">Carriage</a>
+            <a href="#" id="T2" onclick="selectedT2()" class="filter-button" data-filter="eye">Eye</a>
+            <a href="#" id="T3" onclick="selectedT3()" class="filter-button" data-filter="u">U</a>
+            <a href="#" id="T4" onclick="selectedT4()" class="filter-button" data-filter="shoulder bolt">Shoulder Bolts</a>
+          </div>
+      </div>
+
+      <div class="dropdown">
+          <button class="dropbtn">Thread</button>
+          <div class="dropdown-content">
+              <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="2-56">2-56</a>
+          </div>
+      </div>
+      
+      <div class="dropdown">
+          <button class="dropbtn">Length</button>
+          <div class="dropdown-content">
+              <a href="#" id="L1" onclick="selectedL1()" class="filter-button" data-filter='3/8"'>3/8"</a>
+          </div>
+      </div>
+
+      <div style="position: relative; display: inline-block;"><button class="enterbtn" onclick= "sortEnter()">Enter</button></div> 
+    </div> 
+</div>
+
+
+<script>
+// Get the filter input and list elements
+const filterInput = document.getElementById('filterInput');
+const list = document.getElementById('list');
+
+// Add event listener for filter input
+filterInput.addEventListener('input', filterList);
+
+// Function to filter the list based on the filter input
+function filterList() {
+  const filterValue = filterInput.value.toLowerCase();
+  const items = list.getElementsByTagName('li');
+  
+  Array.from(items).forEach(item => {
+    const text = item.textContent.toLowerCase();
+    if (text.includes(filterValue)) {
+      item.style.display = 'block'; // Show the item
+    } else {
+      item.style.display = 'none'; // Hide the item
+    }
+  });
+}
+// Get the filter buttons and list elements
+const filterButtons = document.querySelectorAll('.filter-button');
+const listItems = document.querySelectorAll('#list li');
+
+// Add event listener for each filter button
+filterButtons.forEach(button => {
+  button.addEventListener('click', applyFilter);
+});
+
+// Function to apply the filter
+function applyFilter() {
+  // Get the filter value from the data attribute
+  const filterValue = this.dataset.filter;
+
+  // Show or hide items based on the filter value
+  listItems.forEach(item => {
+    if (filterValue === 'all') {
+      item.classList.remove('hide'); // Show all items
+    } else if (item.classList.contains(filterValue)) {
+      item.classList.remove('hide'); // Show matching items
+    } else {
+      item.classList.add('hide'); // Hide non-matching items
+    }
+  });
+
+  // Remove active class from all buttons and add it to the clicked button
+  filterButtons.forEach(button => {
+    button.classList.remove('active');
+  });
+  this.classList.add('active');
+};
+
+
+
+    <!--variables for screws-->
+    var thread = "?";
+    var length = "?";
+    var shank = "?";
+    var headType = "?";
+    var headDia = "?";
+    var headHeight = "?";
+    var driveStyle = "?";        
+    var material = "?";
+    var tipType = "?";
+    var finish = "?";
+    var code = "?????";
+        
+    function update() {
+        document.getElementById("output").innerHTML = 
+        "BOLT," + " " + headType + " HEAD," + " " + thread + " " + "THREAD," + " " + length + " " + "L";
+        document.getElementById("partNum").innerHTML = 
+        code;
+    };
+   
+    update();
+
+    function resetFunction(){
+        thread = "?";
+        length = "?";
+        shank = "?";
+        headType = "?";
+        headDia = "?";
+        headHeight = "?";
+        driveStyle = "?";        
+        material = "?";
+        tipType = "?";
+        finish = "?";
+        code = "??????";
+        update();
+    };
+
+    resetFunction();
+
+  
+    
+    function sortEnter(){
+        if (headType === 'PAN' && thread === '10-32' && length === '3/8"' ){
+            code = 'H00227';
+            update();
+        }else if (headType === 'ROUND' && thread === '48TRLBLR' && length === '1.25"'){
+            code = 'H00216';
+            update();
+        }else
+            code = "xxxxx";
+            update();
+    };
+
+    function  selectedHT1() {
+        headType = "PAN"; 
+        update();
+    };
+    function  selectedHT2() {
+        headType = "ROUND"; 
+        update();
+    };
+
+</script>
+
+</body>
+</html>
