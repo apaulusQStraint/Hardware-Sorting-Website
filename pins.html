@@ -1,40 +1,90 @@
 <!DOCTYPE html>
-<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-    <head>
-        <link rel="icon" type="image/x-icon" href="Pictures/favicon.png">    
-        <link rel="stylesheet" href="style.css">
-        <a href="index.html"><h1>Pins</h1></a>    
-    
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
-<mso:ContentTypeId msdt:dt="string">0x01010074E1646AEC49D243943F95C343AA8B8A</mso:ContentTypeId>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
+<html lang="en">
+<head>
+    <title>Pins</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
 </head>
 <body>
-
-    <header>
-        <a href="index.html">Home</a>
-        <a href="screws.html">Screws</a>
-        <a href="bolts.html">Bolts</a>
-        <a href="washers.html">Washers</a>
-        <a href="nuts.html">Nuts</a>
-        <a href="springs.html">Springs</a>
-        <a href="pins.html">Pins</a>
-        <a href="rivets.html">Rivets</a>
-        <a href="spacers.html">Spacers</a>
-        <a href="magnets.html">Magnets</a>
-        <a href="grommets.html">Grommets</a>
-        <a href="wire_terminals.html">Wire Terminals</a>
-        <a href="other.html">Other</a>
-    </header>   
-
-    <div style="float: right; padding-right: 250px; padding-left: 250px;">
-        <button class="filter-button" data-filter="all">All</button>
-        <input type="text" id="filterInput" placeholder="Filter">
-        <ul id="list" style="width:500px; overflow: auto; max-height: 725px; padding-right: 100px; list-style-type: square;">
+<header>
+    <h1><a href="index.html">Hardware Sorting</a> | <a href="pins.html">Pins</a></h1>
+    <input type="text" id="filterInputAll" placeholder="&#x1F50E;&#xFE0E;  Search All">
+    <nav>
+    <ul>
+        <li><a href="index.html"><p>Home</p></a></li>
+        <li><a href="screws.html"><p>Screws</p></a></li>
+        <li><a href="bolts.html"><p>Bolts</p></a></li>
+        <li><a href="washers.html"><p>Washers</p></a></li>
+        <li><a href="nuts.html"><p>Nuts</p></a></li>
+        <li><a href="springs.html"><p>Springs</p></a></li>
+        <li><a href="pins.html"><p>Pins</p></a></li>
+        <li><a href="rivets.html"><p>Rivets</p></a></li>
+        <li><a href="spacers.html"><p>Spacers</p></a></li>
+        <li><a href="magnets.html"><p>Magnets</p></a></li>
+        <li><a href="grommets.html"><p>Grommets</p></a></li>
+        <li><a href="wire-terminals.html"><p>Wire Terminals</p></a></li>
+        <li><a href="other.html"><p>Other</p></a></li>
+    </ul>
+    </nav>
+</header>
+<main>
+    <div class="sort">
+        <div class="picture">
+            <img src="images/dim/pinDIM.jpg" alt="pin dim">
+            <img src="images/dim/pinDIM2.jpg" alt="pin dim">
+            <img src="images/dim/pinDIM3.jpg" alt="pin dim">
+        </div>
+        <div class="info">
+            <div class="output">
+                <h2>Output</h2>
+                <p id="output"></p>
+                <h3>Part Code</h3>
+                <p id="partNum"></p>
+            </div>
+            <div class="input">
+            <button class="resetbtn filter-button" onclick="resetFunction()" data-filter="all">Reset</button>
+            <div class="dropdown">
+                <button class="dropbtn" id="show">Type</button>
+                <div class="dropdown-content">
+                  <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="dowel">Dowel</a>
+                  <a href="#" id="T2" onclick="selectedT2()" class="filter-button" data-filter="clevis">Clevis</a>
+                  <a href="#" id="T3" onclick="selectedT3()" class="filter-button" data-filter="slotted">Slotted</a>
+                  <a href="#" id="T4" onclick="selectedT4()" class="filter-button" data-filter="quick-release">Quick-Release</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Diameter</button>
+                <div class="dropdown-content">
+                  <a href="#" id="D1" onclick="selectedD1()" class="filter-button" data-filter='3/16"'>3/16"</a>
+                  <a href="#" id="D2" onclick="selectedD2()" class="filter-button" data-filter='1/4"'>1/4"</a>
+                </div>
+            </div>  
+            <div class="dropdown">
+                <button class="dropbtn">Length</button>
+                <div class="dropdown-content">
+                  <a href="#" id="L1" onclick="selectedL1()" class="filter-button" data-filter='0.25"'>0.25"</a>
+                  <a href="#" id="L2" onclick="selectedL2()" class="filter-button" data-filter='0.375"'>0.375"</a>
+                  <a href="#" id="L3" onclick="selectedL3()" class="filter-button" data-filter='0.575"'>0.575"</a>
+                  <a href="#" id="L4" onclick="selectedL4()" class="filter-button" data-filter='5/8"'>5/8"</a>
+                  <a href="#" id="L5" onclick="selectedL5()" class="filter-button" data-filter='1.5"'>1.5"</a>
+                  <a href="#" id="L6" onclick="selectedL6()" class="filter-button" data-filter='1.75"'>1.75"</a>
+                  <a href="#" id="L7" onclick="selectedL7()" class="filter-button" data-filter='2"'>2"</a>
+                  <a href="#" id="L8" onclick="selectedL8()" class="filter-button" data-filter='2.75"'>2.75"</a>
+                </div>
+            </div>
+            <button class="enterbtn" onclick= "sortEnter()">Enter</button>   
+            </div>
+        </div>
+    </div>
+    <div class="search">
+        <div class="top">
+            <button class="filter-button" data-filter="all">All</button>
+            <input type="text" id="filterInput" placeholder="Filter">
+        </div>
+        <ul class="list">
             <li class='dowel 0.575"' id="H00171"><p>H00171    PIN, DOWEL, 0.575" L</p></li>
             <li class='clevis 1.75"' id="H00189"><p>H00189    PIN, CLEVIS, 1.75"L</p></li>
             <li class='slotted 0.375"' id="H00199"><p>H00199    PIN, SLOTTED, 0.375"</p></li>
@@ -43,235 +93,9 @@
             <li class='clevis 1.5"' id="H00337"><p>H00337    PIN, CLEVIS, 1.5" L</p></li>
             <li class='dowel 3/16" 2.75"' id="H09058"><p>H09058    PIN, DOWEL, DIAM 3/16", 2.75" L</p></li>
             <li class='quick-release 1/4" 5/8"' id="H10527"><p>H10527    PIN, QUICK-RELEASE 1/4"OD X 5/8"</p></li>
-        </ul>
-        </div>
-        
-        <ul style="overflow: auto; max-height: 350px; list-style-type: none;">
-            <li><img src="Pictures/DIM Pics/Pin Dim.jpg" alt="nut-dim" style="width: 650px; "></li>
-            <li><img src="Pictures/DIM Pics/Pin Dim 2.jpg" alt="nut-dim" style="width: 650px; "></li>
-            <li><img src="Pictures/DIM Pics/Pin Dim 3.jpg" alt="nut-dim" style="width: 650px; "></li>
-          </ul>
-              
-        <div style="float: left; padding-left: 100px;">    
-            <div><h2 style="padding-top: 25px;">Output</h2></div>
-            <div><p id="output"></p></div>
-            <div><h3>Part Code</h3></div>  
-            <div><p id="partNum" style="padding-bottom: 25px;"></p></div>
-        <div style="float: left;">
-    
-        <div style="position: relative; display: inline-block;">
-            <button class="resetbtn filter-button" onclick="resetFunction()" data-filter="all">Reset</button>
-        </div>
-    
-        <div class="dropdown">
-            <button class="dropbtn" id="show">Type</button>
-            <div class="dropdown-content">
-              <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="dowel">Dowel</a>
-              <a href="#" id="T2" onclick="selectedT2()" class="filter-button" data-filter="clevis">Clevis</a>
-              <a href="#" id="T3" onclick="selectedT3()" class="filter-button" data-filter="slotted">Slotted</a>
-              <a href="#" id="T4" onclick="selectedT4()" class="filter-button" data-filter="quick-release">Quick-Release</a>
-            </div>
-        </div>
-    
-        <div class="dropdown">
-            <button class="dropbtn">Diameter</button>
-            <div class="dropdown-content">
-              <a href="#" id="D1" onclick="selectedD1()" class="filter-button" data-filter='3/16"'>3/16"</a>
-              <a href="#" id="D2" onclick="selectedD2()" class="filter-button" data-filter='1/4"'>1/4"</a>
-            </div>
-        </div>
-        
-        <div class="dropdown">
-            <button class="dropbtn">Length</button>
-            <div class="dropdown-content">
-              <a href="#" id="L1" onclick="selectedL1()" class="filter-button" data-filter='0.25"'>0.25"</a>
-              <a href="#" id="L2" onclick="selectedL2()" class="filter-button" data-filter='0.375"'>0.375"</a>
-              <a href="#" id="L3" onclick="selectedL3()" class="filter-button" data-filter='0.575"'>0.575"</a>
-              <a href="#" id="L4" onclick="selectedL4()" class="filter-button" data-filter='5/8"'>5/8"</a>
-              <a href="#" id="L5" onclick="selectedL5()" class="filter-button" data-filter='1.5"'>1.5"</a>
-              <a href="#" id="L6" onclick="selectedL6()" class="filter-button" data-filter='1.75"'>1.75"</a>
-              <a href="#" id="L7" onclick="selectedL7()" class="filter-button" data-filter='2"'>2"</a>
-              <a href="#" id="L8" onclick="selectedL8()" class="filter-button" data-filter='2.75"'>2.75"</a>
-            </div>
-        </div>
-    
-        <div style="position: relative; display: inline-block;"><button class="enterbtn" onclick= "sortEnter()">Enter</button></div> 
-    </div> 
+        </ul>    
     </div>
-       
-    <script>
-    // Get the filter input and list elements
-    const filterInput = document.getElementById('filterInput');
-    const list = document.getElementById('list');
-    
-    // Add event listener for filter input
-    filterInput.addEventListener('input', filterList);
-    
-    // Function to filter the list based on the filter input
-    function filterList() {
-      const filterValue = filterInput.value.toLowerCase();
-      const items = list.getElementsByTagName('li');
-      
-      Array.from(items).forEach(item => {
-        const text = item.textContent.toLowerCase();
-        if (text.includes(filterValue)) {
-          item.style.display = 'block'; // Show the item
-        } else {
-          item.style.display = 'none'; // Hide the item
-        }
-      });
-    }
-    // Get the filter buttons and list elements
-    const filterButtons = document.querySelectorAll('.filter-button');
-    const listItems = document.querySelectorAll('#list li');
-    
-    // Add event listener for each filter button
-    filterButtons.forEach(button => {
-      button.addEventListener('click', applyFilter);
-    });
-    
-    // Function to apply the filter
-    function applyFilter() {
-      // Get the filter value from the data attribute
-      const filterValue = this.dataset.filter;
-    
-      // Show or hide items based on the filter value
-      listItems.forEach(item => {
-        if (filterValue === 'all') {
-          item.classList.remove('hide'); // Show all items
-        } else if (item.classList.contains(filterValue)) {
-          item.classList.remove('hide'); // Show matching items
-        } else {
-          item.classList.add('hide'); // Hide non-matching items
-        }
-      });
-    
-      // Remove active class from all buttons and add it to the clicked button
-      filterButtons.forEach(button => {
-        button.classList.remove('active');
-      });
-      this.classList.add('active');
-    };
-    
-        <!--variables for screws-->
-        var type = "?";
-        var diameter = "?";        
-        var length = "?";
-        var code = "?????";
-            
-        function update() {
-            document.getElementById("output").innerHTML = 
-            "PIN," + " " + type + " " + diameter + " " + " " + length + " " + "L";
-            document.getElementById("partNum").innerHTML = 
-            code;
-        };
-       
-        update();
-    
-        function resetFunction(){
-            type = "?";
-            diameter = "?";        
-            length = "?";
-            code = "??????";
-            update();
-        };
-    
-        resetFunction();    
-        
-        function sortEnter(){
-            if (type === 'DOWEL' && diameter === '?' && length === '0.575"' ){
-                code = 'H00171';
-                update();
-            }else if (type === 'CLEVIS' && diameter === '?' && length === '1.75"'){
-                code = 'H00189';
-                update();
-            }else if (type === 'SLOTTED' && diameter === '?' && length === '0.375"'){
-                code = 'H00199';
-                update();
-            }else if (type === 'SLOTTED' && diameter === '?' && length === '0.25"'){
-                code = 'H00232';
-                update();
-            }else if (type === 'CLEVIS' && diameter === '?' && length === '2"'){
-                code = 'H00336';
-                update();
-            }else if (type === 'CLEVIS' && diameter === '?' && length === '1.5"'){
-                code = 'H00337';
-                update();
-            }else if (type === 'DOWEL' && diameter === '3/16"' && length === '2.75"'){
-                code = 'H09058';
-                update();
-            }else if (type === 'QUICK-RELEASE' && diameter === '1/4"' && length === '5/8"'){
-                code = 'H10527';
-                update();
-            }else
-                code = "xxxxx";
-                update();
-        };
-    
-        function  selectedT1() {
-            type = "DOWEL"; 
-            update();
-        }; 
 
-        function  selectedT2() {
-            type = "CLEVIS"; 
-            update();
-        }; 
-
-        function  selectedT3() {
-            type = "SLOTTED"; 
-            update();
-        }; 
-
-        function  selectedT4() {
-            type = "QUICK-RELEASE"; 
-            update();
-        }; 
-
-        function  selectedD1() {
-            diameter = '3/16"'; 
-            update();
-        }; 
-
-        function  selectedD2() {
-            diameter = '1/4"'; 
-            update();
-        }; 
-
-        function  selectedL1() {
-            length = '0.25"'; 
-            update();
-        }; 
-        function  selectedL2() {
-            length = '0.375"'; 
-            update();
-        }; 
-        function  selectedL3() {
-            length = '0.575"'; 
-            update();
-        }; 
-        function  selectedL4() {
-            length = '5/8"'; 
-            update();
-        }; 
-        function  selectedL5() {
-            length = '1.5"'; 
-            update();
-        }; 
-        function  selectedL6() {
-            length = '1.75"'; 
-            update();
-        }; 
-        function  selectedL7() {
-            length = '2"'; 
-            update();
-        }; 
-        function  selectedL8() {
-            length = '2.75"'; 
-            update();
-        }; 
-        
-    </script>
-    
-    </body>
-    </html>
+</main>
+</body>
+</html>

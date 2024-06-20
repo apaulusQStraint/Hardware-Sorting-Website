@@ -1,48 +1,113 @@
 <!DOCTYPE html>
-<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-    <head>
-        <link rel="icon" type="image/x-icon" href="Pictures/favicon.png">    
-        <link rel="stylesheet" href="style.css">
-    
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
-<mso:ContentTypeId msdt:dt="string">0x01010074E1646AEC49D243943F95C343AA8B8A</mso:ContentTypeId>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
+<html lang="en">
+<head>
+    <title>Home</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
 </head>
-    <a href="index.html"><h1>Hardware Sorting</h1></a>
-    
-    <header>
-        <a href="index.html">Home</a>
-        <a href="screws.html">Screws</a>
-        <a href="bolts.html">Bolts</a>
-        <a href="washers.html">Washers</a>
-        <a href="nuts.html">Nuts</a>
-        <a href="springs.html">Springs</a>
-        <a href="pins.html">Pins</a>
-        <a href="rivets.html">Rivets</a>
-        <a href="spacers.html">Spacers</a>
-        <a href="magnets.html">Magnets</a>
-        <a href="grommets.html">Grommets</a>
-        <a href="wire_terminals.html">Wire Terminals</a>
-        <a href="other.html">Other</a>
-    </header>          
-
-    <h3>Hardware Type</h3>   
-    <body>
-        <a href="screws.html"><img src="Pictures/Screw.jpg" alt="screw" style="width: 250px;">Screws</a>
-        <a href="bolts.html"><img src="Pictures/Bolt.JPG" alt="bolt" style="width: 250px;">Bolts</a>
-        <a href="washers.html"><img src="Pictures/Washer.JPG" alt="washers" style="width: 250px;">Washer</a>
-        <a href="nuts.html"><img src="Pictures/Nut.JPG" alt="nuts" style="width: 250px;">Nuts</a>
-        <a href="springs.html"><img src="Pictures/Spring.JPG" alt="springs" style="width: 250px;">Springs</a>
-        <a href="pins.html"><img src="Pictures/Pin.JPG" alt="pins" style="width: 250px;">Pins</a>
-        <a href="rivets.html"><img src="Pictures/Rivet.JPG" alt="rivets" style="width: 250px;">Rivets</a>
-        <a href="spacers.html"><img src="Pictures/Spacer.JPG" alt="spacers" style="width: 250px;">Spacers</a>
-        <a href="magnets.html"><img src="Pictures/Magnet.JPG" alt="magnets" style="width: 250px;">Magnets</a>
-        <a href="grommets.html"><img src="Pictures/Grommet.jpg" alt="grommets" style="width: 250px;">Grommets</a>    
-        <a href="wire_terminals.html"><img src="Pictures/Wire%20Terminal.JPG" alt="wire_terminals" style="width: 250px;">Wire Terminal</a> 
-        <a href="other.html"><img src="Pictures/Other.jpg" alt="other" style="width: 250px;">Other</a>
-    </body>
+<body>
+<header>
+    <h1><a href="index.html">Hardware Sorting</a></h1>
+    <input type="text" id="filterInputAll" placeholder="&#x1F50E;&#xFE0E;  Search All">
+    <nav>
+    <ul>
+        <li><a href="index.html"><p>Home</p></a></li>
+        <li><a href="screws.html"><p>Screws</p></a></li>
+        <li><a href="bolts.html"><p>Bolts</p></a></li>
+        <li><a href="washers.html"><p>Washers</p></a></li>
+        <li><a href="nuts.html"><p>Nuts</p></a></li>
+        <li><a href="springs.html"><p>Springs</p></a></li>
+        <li><a href="pins.html"><p>Pins</p></a></li>
+        <li><a href="rivets.html"><p>Rivets</p></a></li>
+        <li><a href="spacers.html"><p>Spacers</p></a></li>
+        <li><a href="magnets.html"><p>Magnets</p></a></li>
+        <li><a href="grommets.html"><p>Grommets</p></a></li>
+        <li><a href="wire-terminals.html"><p>Wire Terminals</p></a></li>
+        <li><a href="other.html"><p>Other</p></a></li>
+    </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <div class="hardware">
+            <a href="screws.html">
+                <img src="images/screw.jpg" alt="screw">
+                <h2>Screws</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="bolts.html">
+                <img src="images/bolt.JPG" alt="bolt">
+                <h2>Bolt</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="washers.html">
+                <img src="images/washer.JPG" alt="washer">
+                <h2>Washers</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="nuts.html">
+                <img src="images/nut.JPG" alt="nut">
+                <h2>Nuts</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="springs.html">
+                <img src="images/spring.JPG" alt="spring">
+                <h2>Springs</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="pins.html">
+                <img src="images/pin.JPG" alt="pins">
+                <h2>Pins</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="rivets.html">
+                <img src="images/rivet.JPG" alt="rivets">
+                <h2>Rivets</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="screws.html">
+                <img src="images/spacer.JPG" alt="Spacer">
+                <h2>Spacers</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="magnets.html">
+                <img src="images/magnet.JPG" alt="Magnet">
+                <h2>Magnets</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="grommets.html">
+                <img src="images/grommet.jpg" alt="grommets">
+                <h2>Grommets</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="wire-terminals.html">
+                <img src="images/wireTerminal.JPG" alt="screw">
+                <h2>Wire Terminal</h2>
+            </a>
+        </div>
+        <div class="hardware">
+            <a href="other.html">
+                <img src="images/Other.jpg" alt="other">
+                <h2>Other</h2>
+            </a>
+        </div>
+    </section>
+</main>
+</body>
 </html>

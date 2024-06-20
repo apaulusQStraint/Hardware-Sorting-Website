@@ -1,111 +1,276 @@
-    h1{
-        color: rgb(0, 6, 100)
-    }
-     
-    a:link {
-        background-color: transparent;
-        text-decoration: none;
-    }
+@charset "utf-8";
 
-    a:visited {
-        color: rgb(0, 60, 160);
-        background-color: transparent;
-        text-decoration: none;
-    }
+*{
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
 
-    a:hover {
-        color: rgb(85, 110, 120);
-        background-color: transparent;
-        text-decoration: underline;
-    }
+body, main, section, header, p, h1, h2, h3, h4, h5, h6, footer, li{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
 
-    .dropbtn {
-        background-color: rgb(0, 60, 160);
-        color: white;
-        padding: 5px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        width: 125px;
-        height: 35px;
-    }
-      
-    .dropdown {
-        position: relative;
-        display: inline-block;       
-    }
-      
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        height: auto;
-        max-height: 200px;
-        overflow: auto;
-    }
+body{
+	width: 100%;
+	padding: 25px 50px;
+}
 
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-      
-    .dropdown-content a:hover {
-        background-color: #f1f1f1
-    }
-      
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
+h1{
+	color: #000764;
+}
 
-    .hide {
-        display: none;
-    }
-      
-    .resetbtn {
-        background-color: rgb(100, 100, 150);
-        color: white;
-        padding: 5px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        width: 125px;
-        height: 35px;
-        font-weight: bold;
-    }
-    
-    .enterbtn {
-        background-color: rgb(0, 0, 100);
-        color: white;
-        padding: 5px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        width: 125px;
-        height: 35px;
-        font-weight: bold;
-    }
+a{
+	color: #000764;
+}
+ 
+a:link {
+	background-color: transparent;
+	text-decoration: none;
+	color: #0006a0;
+}
 
-    .list{
-        list-style-type: none;
-    }
+a:active{
+	color: #0006a0;
+}
+
+header{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	position: relative;
+}
+
+header input{
+	width: 35%;
+	height: 25px;
+	margin-right: 0px;
+	position: absolute;
+	right: 0;
+	top: 10%;
+}
+
+header nav{
+	width: 100%;
+	display: flex;
+	background: #0006a0;
+	margin: 15px 0px;
+	margin-top: 15px;
+}
+
+header nav ul{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0px;
+	padding: 0px;
+}
+
+header nav li{
+	margin: auto 0px;
+	margin-right: 5px;
+	padding: 0px 10px;
+}
+
+header nav li a{
+	display: flex;
+	width: 100%;
+	height: 50px;
+	color: whitesmoke;
+	border: 1px solid #556e7800;
+	border-bottom: 4px solid #556e7800;
+}
+
+header nav li a p{
+	margin: auto;
+}
+
+header nav a:hover {
+	color: #646496;
+	background-color: transparent;
+	border: 1px solid #556e7800;
+	border-bottom: 4px solid #646496;
+}
+
+main{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+section{
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 25px;
+}
+
+section .hardware{
+	width: 15%;
+	aspect-ratio: 1/1;
+	background: white;
+	box-shadow: 0px 0px 25px 1px #0005a00a;
+	border-radius: 2.5px;
+	position: relative;
+}
+
+section .hardware:hover{
+	box-shadow: 0px 0px 25px 1px #0005a024;
+}
+
+section img{
+	width: 100%;
+	padding: 20%;
+}
+
+section h2{
+	color: #000764;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-shadow: 0px 0px 10px #ffffff;
+	text-align: center;
+	font-size: 25pt;
+}
+
+main .sort{
+	width: 50%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.sort .picture{
+	width: 100%;
+	aspect-ratio: 21/9;
+	overflow: auto;
+}
+
+.sort .picture img{
+	width: 100%;
+	aspect-ratio: 21/9;
+	object-fit: contain;
+}
+
+.sort .input{
+	width: 100%;
+	margin: 5px 0px;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 5px;
+}
+
+.sort .info{
+	width: 100%;
+	margin: auto;
+}
+
+main .search{
+	width: 50%;
+}
+
+.search .top{
+	width: 100%;
+	padding-left: 5%;
+}
+
+.search .top button{
+	width: 5%;
+}
+
+.search .top input{
+	width: 45%;
+}
+
+.list{
+	width: 100%;
+	overflow: auto; 
+	max-height: 60vh;
+}
+
+/* input buttons */
+.dropbtn {
+	background-color: #0006a0;
+	color: white;
+	padding: 5px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 125px;
+	height: 35px;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;       
+}
   
-    ::-webkit-scrollbar { 
-        width: 10px; 
-    }
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px #646496;
+	z-index: 1;
+	height: auto;
+	max-height: 150px;
+	overflow: auto;
+}
 
-    ::-webkit-scrollbar-thumb {
-      background-color: rgb(0, 0, 100);
-      background-clip: padding-box;
-      border: 2px solid #fff;
-      border-radius: 10px;
-    }
-    
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
   
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+  
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+  
+.resetbtn {
+	background-color:#646496;
+	color: white;
+	padding: 5px; 
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 125px;
+	height: 35px;
+	font-weight: bold;
+}
+
+.enterbtn {
+	background-color: #000764;
+	color: white;
+	padding: 5px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 125px;
+	height: 35px;
+	font-weight: bold;
+}
+
+::-webkit-scrollbar { 
+	width: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000764;
+  background-clip: padding-box;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}

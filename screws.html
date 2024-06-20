@@ -1,211 +1,206 @@
 <!DOCTYPE html>
-<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-    <head>
-        <link rel="icon" type="image/x-icon" href="Pictures/favicon.png">    
-        <link rel="stylesheet" href="style.css">    
-        <a href="index.html"><h1>Screws</h1></a>
-    
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
-<mso:ContentTypeId msdt:dt="string">0x01010074E1646AEC49D243943F95C343AA8B8A</mso:ContentTypeId>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
+<html lang="en">
+<head>
+    <title>Screws</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-    <header>
-        <a href="index.html">Home</a>
-        <a href="screws.html">Screws</a>
-        <a href="bolts.html">Bolts</a>
-        <a href="washers.html">Washers</a>
-        <a href="nuts.html">Nuts</a>
-        <a href="springs.html">Springs</a>
-        <a href="pins.html">Pins</a>
-        <a href="rivets.html">Rivets</a>
-        <a href="spacers.html">Spacers</a>
-        <a href="magnets.html">Magnets</a>
-        <a href="grommets.html">Grommets</a>
-        <a href="wire_terminals.html">Wire Terminals</a>
-        <a href="other.html">Other</a>
-    </header>   
-
-    <div style="float: right; padding-right: 250px;">
-    <button class="filter-button" data-filter="all">All</button>
-    <input type="text" id="filterInput" placeholder="Filter">
-    <ul id="list" style="width:500px; overflow: auto; max-height: 725px; padding-right: 100px; list-style-type: square;">
-        <li class='hex 5/8"-11 ' id="01112001402"><p>01112001402   SCREW, HEX HEAD 5/8"-11 X 1" YZD</p></li>
-        <li class='button m4 0.7"' id="C5-6301-3"><p>C5-6301-3   SCREW, SKT BTN HEAD  M4 X 0.7</p></li>
-        <li class='m10x1.5 30mm 12.9 ' id="H00029"><p>H00029    SCREW M10x1.5 X 30MM LG, GR 12.9</p></li>
-        <li class='m4 0.7 6mm' id="H00097"><p>H00097    SCREW, M4X0.7 X 6MM</p></li>
-        <li class='socket 5/16"-18 1 1/4"'><p>H10126   SCREW, SOCKET HEAD, 5/16"-18 THREAD, 1 1/4" L</p></li>
-        <li class='pan torx 10-32 0.75"' id="H00135"><p>H00135    SCREW PAN HEAD, TORX DR, 10-32 THREAD, 0.75" L</p></li>
-        <li class='pan 1/4"-20 2"' id="H00163"><p>H00163    SCREW, PAN HEAD, 1/4-20 THREAD, 2" L</p></li>
-        <li class='pan 4-40 1/2"' id="H00170"><p>H00170    SCREW, PAN HEAD, 4-40 THREAD, 1/2" L</p></li>
-        <li class='button torx 1/4"-20 3/4"' id="H00173"><p>H00173    SCREW, BTN HD TORX, 1/4-20 THREAD, 3/4" L</p></li>
-        <li class='button m3 0.5mm 10mm"' id="H00176"><p>H00176    SCREW, BUTTON HEAD, M3 x 0.5mm THREAD, 10mm L</p></li>
-        <li class='pan 4-24 3/8"' id="H00179"><p>H00179    SCREW, PAN HEAD, 4-24 THREAD, 3/8" L</p></li>
-        <li class='button 10-32 3/8"' id="H00180"><p>H00180    SCREW, BUTTON HEAD, 10-32 THREAD, 3/8" L</p></li>
-        <li class='button m4 0.7mm 20mm"' id="H00190"><p>H00190    SCREW, BUTTON HEAD, M4X0.7mm THREAD, 20mm L</p></li>
-        <li class='button m4 0.7mm 8mm"' id="H00192"><p>H00192    SCREW, BUTTON HEAD, M4 x 0.7mm THREAD, 8mm L</p></li>
-        <li class='button 10-32 1/2"'><p>H00203   SCREW, BUTTON HEAD, 10-32 THREAD, 1/2" L</p></li>
-        <li class='pan 10-32 1/2"'><p>H00204   SCREW, PAN HEAD, 10-32 THREAD, 1/2" L</p></li>
-        <li class='button 5/16"-18 1' id="H00209"><p>H00209    SCREW, BUTTON HEAD 5/16"-18 X 1 L</p></li>
-        <li class='round 48trlblr 1.25"'><p>H00216   SCREW, ROUND HEAD, 48TRLBLR THREAD, 1.25" L</p></li>
-        <li class='button 8-32 1.0"' id="H00225"><p>H00225    SCREW, BUTTON HEAD, 8-32 THREAD, 1.0"L</p></li>
-        <li class='button torx m4 0.7 10 as' id="H00226"><p>H00226    SCREW BTN TRX M4 X 0.7 X 10 AS Z</p></li>
-        <li class='pan 10-32 3/8"' id="H00227"><p>H00227   SCREW, PAN HEAD, 10-32 THREAD, 3/8" L</p></li>
-        <li class='pan torx 2-56 .25"' id="H00237"><p>H00237    SCREW, PAN HD, TRX, 2-56 X .25" L</p></li>
-        <li class='round 10-32 1/4"' id="H00269"><p>H00269    SCREW, ROUND HEAD, PHILLIPS, 10-32 X 1/4"</p></li>
-        <li class='pan torx 10-32 1"' id="H00332"><p>H00332    SCREW PAN HEAD, TORX DR, 10-32 THREAD, 1" L</p></li>
-        <li class='button 10-32 1""' id="H00357"><p>H00357    SCREW, BUTTON HEAD, 10-32 THREAD, 1" L</p></li>
-        <li class='button 3/8"-16 5/8"' id="H10075"><p>H10075    SCREW, BUTTON HEAD, 3/8-16 THREAD,  5/8" L STOCK</p></li>
-        <li class='button 1/4"-20 3/4"' id="H10118"><p>H10118    SCREW, BUTTON HEAD, 1/4"-20 THREAD, 3/4" L</p></li>
-        <li class='flat m3 8mm"' id="H10128"><p>H10128    SCREW, FLAT HEAD, M3 THREAD, 8MM LG</p></li>
-        <li class='hex 3/8"-16 3" grade 8' id="H10135"><p>H10135    SCREW HEX 3/8"-16 x 3" GR 8</p></li>
-        <li class='hex flat 3/8"-16 3 zinc' id="H10136"><p>H10136    SCREW, FLAT HEAD, HEX DRIVE  3/8-16 X 3, ZINC PLATED</p></li>
-        <li class='hex flat 3/8"-16 1.5 zinc' id="H10137"><p>H10137    SCREW, FLAT HEAD, HEX DRIVE  3/8"-16 X 1.5, ZINC PLATED</p></li>
-        <li class='flat philips m2 0.4 6mm' id="H10170"><p>H10170    SCREW FLAT, PHILLIPS #1  M2 X 0.4 THREAD 6MM LG.</p></li>
-        <li class=' ' id="H10182"><p>H10182    SCREW, BTN HEAD, SOCKET CAP  3/8"-16 THREAD 1.25 LG.</p></li>
-        <li class='socket m10 35mm "' id="H10187"><p>H10187    SCREW, SOCKET HEAD, M10 X 35MM LG. STL/p></li>
-        <li class='socket m10 25mm' id="H10189"><p>H10189    SCREW, SOCKET HEAD, M10 X 25MM LG. STL</p></li>
-        <li class='"' id="H10198"><p>H10198    SCREW, LARGER HEAD HEX-DRIVE BOLT, 1/4"-20 THREAD</p></li>
-        <li class='hex 1/4"-28 1/2"' id="H10526"><p>H10526    SCREW, HEX SOCKET 1/4"-28 X 1/2"</p></li>
-        <li class='round no.6 phillip 1/4"' id="H10540"><p>H10540    SCREW, ROUND HEAD,NO.6,SELF TAPPING,PHILLIPS,1/4"</p></li>
-        <li class='flat phillip 10-24 3/4"' id="H10548"><p>H10548    SCREW, FLAT HEAD PHILLIP #10-24 X 3/4" SS</p></li>
-        <li class='button 49/64" 1"' id="H10572"><p>H10572    SCREW, BUTTON HEAD, 49/64" THREAD, 1" L</p></li>
-        <li class='hex 1/2"-13 7/8" grade 5' id="H10590"><p>H10590    SCREW, HEX HEAD 1/2"-13 X 7/8" GRADE 5</p></li>
-        <li class='hex 5/8"-11 2"' id="H10591"><p>H10591    SCREW, HEX HEAD, 5/8-11 UNC, 2"</p></li>
-        <li class='flat hex 3/8"-16 4' id="H10592"><p>H10592    SCREW, FLAT HEAD, HEX DRIVE  3/8"-16 X 4 L</p></li>
-        <li class='round no.5 1/4"' id="H10593"><p>H10593    SCREW, ROUND HEAD, NO. 5 THREAD, 1/4" L STOCK</p></li>
-        <li class='hex 3/8"-16 1.5"' id="H10595"><p>H10595    SCREW, HEX HEAD,3/8"-16 THREAD, 1.5"</p></li>
-        <li class='hex no.6 0.25"' id="H10611"><p>H10611    SCREW, HEX HEAD, NO. 6 THREAD, 0.25" L STOCK</p></li>
-        <li class='socket 1/4"-20 1/2"' id="H10615"><p>H10615    SCREW, SOCKET HEAD, 1/4"-20 THREAD, 1/2"</p></li>
-        <li class='m4 0.7mm 35mm' id="H10616"><p>H10616    SCREW, SHOULDER BOLT, M4 X 0.7mm, 35mm</p></li>
-        <li class='round 10-16 1.00' id="H10618"><p>H10618    SCREW, ROUND HEAD, 10-16 THREAD, 1.00 IN</p></li>
-        <li class='pan phillip 4-40 3/8"' id="H20107"><p>H20107    SCREW, PAN HEAD, PHILLIPS 4-40 X 3/8" </p></li>
-        <li class='"' id="Q04C1356"><p>Q04C1356    SCREW, BTN HEX 1/4-20X3-1/2 BLK</p></li>
+<header>
+    <h1><a href="index.html">Hardware Sorting</a> | <a href="screws.html">Screws</a></h1>
+    <input type="text" id="filterInputAll" placeholder="&#x1F50E;&#xFE0E;  Search All">
+    <nav>
+    <ul>
+        <li><a href="index.html"><p>Home</p></a></li>
+        <li><a href="screws.html"><p>Screws</p></a></li>
+        <li><a href="bolts.html"><p>Bolts</p></a></li>
+        <li><a href="washers.html"><p>Washers</p></a></li>
+        <li><a href="nuts.html"><p>Nuts</p></a></li>
+        <li><a href="springs.html"><p>Springs</p></a></li>
+        <li><a href="pins.html"><p>Pins</p></a></li>
+        <li><a href="rivets.html"><p>Rivets</p></a></li>
+        <li><a href="spacers.html"><p>Spacers</p></a></li>
+        <li><a href="magnets.html"><p>Magnets</p></a></li>
+        <li><a href="grommets.html"><p>Grommets</p></a></li>
+        <li><a href="wire-terminals.html"><p>Wire Terminals</p></a></li>
+        <li><a href="other.html"><p>Other</p></a></li>
     </ul>
-    </div>
-    
-    <img src="Pictures/DIM Pics/Screw Dim.JPG" alt="screw-dim" style="width: 650px; padding-left: 75px;">
-
-
-    <div style="float: left; padding-left: 100px; height: 300px;">    
-        <div><h2 style="padding-top: 25px;">Output</h2></div>
-        <div><p id="output"></p></div>
-        <div><h3>Part Code</h3></div>  
-        <div><p id="partNum" style="padding-bottom: 25px;"></p></div>
-    <div style="float: left;">
-
-    <div style="position: relative; display: inline-block;">
-        <button class="resetbtn filter-button" onclick="resetFunction()" data-filter="all">Reset</button>
-    </div>
-
-    <div class="dropdown">
-        <button class="dropbtn" id="show">Head Type</button>
-        <div class="dropdown-content">
-            <a href="#" id="HT1" onclick="selectedHT1()" class="filter-button" data-filter="pan">Pan</a>
-            <a href="#" id="HT2" onclick="selectedHT2()" class="filter-button" data-filter="round">Round</a>
-            <a href="#" id="HT3" onclick="selectedHT3()" class="filter-button" data-filter="socket">Socket</a>
-            <a href="#" id="HT4" onclick="selectedHT4()" class="filter-button" data-filter="button">Button</a>
-            <a href="#" id="HT5" onclick="selectedHT5()" class="filter-button" data-filter="hex">Hex</a>
-            <a href="#" id="HT6" onclick="selectedHT6()" class="filter-button" data-filter="flat">Flat</a>
-
+    </nav>
+</header>
+<main>
+    <div class="sort">
+        <div class="picture">
+            <img src="images/dim/screwDim.JPG" alt="screw dim">
+        </div>
+        <div class="info">
+            <div class="output">
+                <h2>Output</h2>
+                <p id="output"></p>
+                <h3>Part Code</h3>
+                <p id="partNum"></p>
+            </div>
+            <div class="input">
+            <button class="resetbtn filter-button" onclick="resetFunction()" data-filter="all">Reset</button>
+            <div class="dropdown">
+                <button class="dropbtn" id="show">Head Type</button>
+                <div class="dropdown-content">
+                    <a href="#" id="HT1" onclick="selectedHT1()" class="filter-button" data-filter="pan">Pan</a>
+                    <a href="#" id="HT2" onclick="selectedHT2()" class="filter-button" data-filter="round">Round</a>
+                    <a href="#" id="HT3" onclick="selectedHT3()" class="filter-button" data-filter="socket">Socket</a>
+                    <a href="#" id="HT4" onclick="selectedHT4()" class="filter-button" data-filter="button">Button</a>
+                    <a href="#" id="HT5" onclick="selectedHT5()" class="filter-button" data-filter="hex">Hex</a>
+                    <a href="#" id="HT6" onclick="selectedHT6()" class="filter-button" data-filter="flat">Flat</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Thread</button>
+                <div class="dropdown-content">
+                    <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="2-56">2-56</a>
+                    <a href="#" id="T2" onclick="selectedT2()" class="filter-button" data-filter="4-24">4-24</a>
+                    <a href="#" id="T3" onclick="selectedT3()" class="filter-button" data-filter="4-40">4-40</a>
+                    <a href="#" id="T4" onclick="selectedT4()" class="filter-button" data-filter="8-18">8-18</a>
+                    <a href="#" id="T5" onclick="selectedT5()" class="filter-button" data-filter="8-32" >8-32</a>
+                    <a href="#" id="T6" onclick="selectedT6()" class="filter-button" data-filter="10-32">10-32</a>
+                    <a href="#" id="T7" onclick="selectedT7()" class="filter-button" data-filter="48trlblr">48TRLBLR</a>
+                    <a href="#" id="T8" onclick="selectedT8()" class="filter-button" data-filter='1/4"-28'>1/4"-28</a>
+                    <a href="#" id="T9" onclick="selectedT9()" class="filter-button" data-filter='5/16"-18'>5/16"-18</a>
+                    <a href="#" id="T10" onclick="selectedT10()" class="filter-button" data-filter="M10">M10</a>
+                    <a href="#" id="T11" onclick="selectedT11()" class="filter-button" data-filter="M10x1.5">M10x1.5</a>
+                    <a href="#" id="T12" onclick="selectedT12()" class="filter-button" data-filter=""></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Length</button>
+                <div class="dropdown-content">
+                    <a href="#" id="L1" onclick="selectedL1()" class="filter-button" data-filter='3/8"'>3/8"</a>
+                    <a href="#" id="L2" onclick="selectedL2()" class="filter-button" data-filter= '1.25"'>1.25"</a>
+                    <a href="#" id="L3" onclick="selectedL3()" class="filter-button" data-filter='1/2"'>1/2"</a>
+                    <a href="#" id="L4" onclick="selectedL4()" class="filter-button" data-filter='1 1/4"'>1 1/4"</a>
+                    <a href="#" id="L5" onclick="selectedL5()"> </a>
+                    <a href="#" id="L6" onclick="selectedL6()"></a>
+                </div>
+            </div> 
+            <button class="enterbtn" onclick= "sortEnter()">Enter</button>   
+            </div>
         </div>
     </div>
-
-    <div class="dropdown">
-        <button class="dropbtn">Thread</button>
-        <div class="dropdown-content">
-            <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="2-56">2-56</a>
-            <a href="#" id="T2" onclick="selectedT2()" class="filter-button" data-filter="4-24">4-24</a>
-            <a href="#" id="T3" onclick="selectedT3()" class="filter-button" data-filter="4-40">4-40</a>
-            <a href="#" id="T4" onclick="selectedT4()" class="filter-button" data-filter="8-18">8-18</a>
-            <a href="#" id="T5" onclick="selectedT5()" class="filter-button" data-filter="8-32" >8-32</a>
-            <a href="#" id="T6" onclick="selectedT6()" class="filter-button" data-filter="10-32">10-32</a>
-            <a href="#" id="T7" onclick="selectedT7()" class="filter-button" data-filter="48trlblr">48TRLBLR</a>
-            <a href="#" id="T8" onclick="selectedT8()" class="filter-button" data-filter='1/4"-28'>1/4"-28</a>
-            <a href="#" id="T9" onclick="selectedT9()" class="filter-button" data-filter='5/16"-18'>5/16"-18</a>
-            <a href="#" id="T10" onclick="selectedT10()" class="filter-button" data-filter="M10">M10</a>
-            <a href="#" id="T11" onclick="selectedT11()" class="filter-button" data-filter="M10x1.5">M10x1.5</a>
-            <a href="#" id="T12" onclick="selectedT12()" class="filter-button" data-filter=""></a>
+    <div class="search">
+        <div class="top">
+            <button class="filter-button" data-filter="all">All</button>
+            <input type="text" id="filterInput" placeholder="Filter">
         </div>
+        <ul class="list">
+            <li class='hex 5/8"-11 ' id="01112001402"><p>01112001402   SCREW, HEX HEAD 5/8"-11 X 1" YZD</p></li>
+            <li class='button m4 0.7"' id="C5-6301-3"><p>C5-6301-3   SCREW, SKT BTN HEAD  M4 X 0.7</p></li>
+            <li class='m10x1.5 30mm 12.9 ' id="H00029"><p>H00029    SCREW M10x1.5 X 30MM LG, GR 12.9</p></li>
+            <li class='m4 0.7 6mm' id="H00097"><p>H00097    SCREW, M4X0.7 X 6MM</p></li>
+            <li class='pan torx 10-32 0.75"' id="H00135"><p>H00135    SCREW PAN HEAD, TORX DR, 10-32 THREAD, 0.75" L</p></li>
+            <li class='pan 1/4"-20 2"' id="H00163"><p>H00163    SCREW, PAN HEAD, 1/4-20 THREAD, 2" L</p></li>
+            <li class='pan 4-40 1/2"' id="H00170"><p>H00170    SCREW, PAN HEAD, 4-40 THREAD, 1/2" L</p></li>
+            <li class='button torx 1/4"-20 3/4"' id="H00173"><p>H00173    SCREW, BTN HD TORX, 1/4-20 THREAD, 3/4" L</p></li>
+            <li class='button m3 0.5mm 10mm"' id="H00176"><p>H00176    SCREW, BUTTON HEAD, M3 x 0.5mm THREAD, 10mm L</p></li>
+            <li class='pan 4-24 3/8"' id="H00179"><p>H00179    SCREW, PAN HEAD, 4-24 THREAD, 3/8" L</p></li>
+            <li class='button 10-32 3/8"' id="H00180"><p>H00180    SCREW, BUTTON HEAD, 10-32 THREAD, 3/8" L</p></li>
+            <li class='button m4 0.7mm 20mm"' id="H00190"><p>H00190    SCREW, BUTTON HEAD, M4X0.7mm THREAD, 20mm L</p></li>
+            <li class='button m4 0.7mm 8mm"' id="H00192"><p>H00192    SCREW, BUTTON HEAD, M4 x 0.7mm THREAD, 8mm L</p></li>
+            <li class='button 10-32 1/2"'><p>H00203   SCREW, BUTTON HEAD, 10-32 THREAD, 1/2" L</p></li>
+            <li class='pan 10-32 1/2"'><p>H00204   SCREW, PAN HEAD, 10-32 THREAD, 1/2" L</p></li>
+            <li class='button 5/16"-18 1' id="H00209"><p>H00209    SCREW, BUTTON HEAD 5/16"-18 X 1 L</p></li>
+            <li class='round 48trlblr 1.25"'><p>H00216   SCREW, ROUND HEAD, 48TRLBLR THREAD, 1.25" L</p></li>
+            <li class='button 8-32 1.0"' id="H00225"><p>H00225    SCREW, BUTTON HEAD, 8-32 THREAD, 1.0"L</p></li>
+            <li class='button torx m4 0.7 10 as' id="H00226"><p>H00226    SCREW BTN TRX M4 X 0.7 X 10 AS Z</p></li>
+            <li class='pan 10-32 3/8"' id="H00227"><p>H00227   SCREW, PAN HEAD, 10-32 THREAD, 3/8" L</p></li>
+            <li class='pan torx 2-56 .25"' id="H00237"><p>H00237    SCREW, PAN HD, TRX, 2-56 X .25" L</p></li>
+            <li class='round 10-32 1/4"' id="H00269"><p>H00269    SCREW, ROUND HEAD, PHILLIPS, 10-32 X 1/4"</p></li>
+            <li class='pan torx 10-32 1"' id="H00332"><p>H00332    SCREW PAN HEAD, TORX DR, 10-32 THREAD, 1" L</p></li>
+            <li class='button 10-32 1""' id="H00357"><p>H00357    SCREW, BUTTON HEAD, 10-32 THREAD, 1" L</p></li>
+            <li class='button 3/8"-16 5/8"' id="H10075"><p>H10075    SCREW, BUTTON HEAD, 3/8-16 THREAD,  5/8" L STOCK</p></li>
+            <li class='button 1/4"-20 3/4"' id="H10118"><p>H10118    SCREW, BUTTON HEAD, 1/4"-20 THREAD, 3/4" L</p></li>
+            <li class='socket 5/16"-18 1 1/4"'><p>H10126   SCREW, SOCKET HEAD, 5/16"-18 THREAD, 1 1/4" L</p></li>
+            <li class='flat m3 8mm"' id="H10128"><p>H10128    SCREW, FLAT HEAD, M3 THREAD, 8MM LG</p></li>
+            <li class='hex 3/8"-16 3" grade 8' id="H10135"><p>H10135    SCREW HEX 3/8"-16 x 3" GR 8</p></li>
+            <li class='hex flat 3/8"-16 3 zinc' id="H10136"><p>H10136    SCREW, FLAT HEAD, HEX DRIVE  3/8-16 X 3, ZINC PLATED</p></li>
+            <li class='hex flat 3/8"-16 1.5 zinc' id="H10137"><p>H10137    SCREW, FLAT HEAD, HEX DRIVE  3/8"-16 X 1.5, ZINC PLATED</p></li>
+            <li class='flat philips m2 0.4 6mm' id="H10170"><p>H10170    SCREW FLAT, PHILLIPS #1  M2 X 0.4 THREAD 6MM LG.</p></li>
+            <li class=' ' id="H10182"><p>H10182    SCREW, BTN HEAD, SOCKET CAP  3/8"-16 THREAD 1.25 LG.</p></li>
+            <li class='socket m10 35mm "' id="H10187"><p>H10187    SCREW, SOCKET HEAD, M10 X 35MM LG. STL</p></li>
+            <li class='socket m10 25mm' id="H10189"><p>H10189    SCREW, SOCKET HEAD, M10 X 25MM LG. STL</p></li>
+            <li class='"' id="H10198"><p>H10198    SCREW, LARGER HEAD HEX-DRIVE BOLT, 1/4"-20 THREAD</p></li>
+            <li class='hex 1/4"-28 1/2"' id="H10526"><p>H10526    SCREW, HEX SOCKET 1/4"-28 X 1/2"</p></li>
+            <li class='round no.6 phillip 1/4"' id="H10540"><p>H10540    SCREW, ROUND HEAD,NO.6,SELF TAPPING,PHILLIPS,1/4"</p></li>
+            <li class='flat phillip 10-24 3/4"' id="H10548"><p>H10548    SCREW, FLAT HEAD PHILLIP #10-24 X 3/4" SS</p></li>
+            <li class='button 49/64" 1"' id="H10572"><p>H10572    SCREW, BUTTON HEAD, 49/64" THREAD, 1" L</p></li>
+            <li class='hex 1/2"-13 7/8" grade 5' id="H10590"><p>H10590    SCREW, HEX HEAD 1/2"-13 X 7/8" GRADE 5</p></li>
+            <li class='hex 5/8"-11 2"' id="H10591"><p>H10591    SCREW, HEX HEAD, 5/8-11 UNC, 2"</p></li>
+            <li class='flat hex 3/8"-16 4' id="H10592"><p>H10592    SCREW, FLAT HEAD, HEX DRIVE  3/8"-16 X 4 L</p></li>
+            <li class='round no.5 1/4"' id="H10593"><p>H10593    SCREW, ROUND HEAD, NO. 5 THREAD, 1/4" L STOCK</p></li>
+            <li class='hex 3/8"-16 1.5"' id="H10595"><p>H10595    SCREW, HEX HEAD,3/8"-16 THREAD, 1.5"</p></li>
+            <li class='hex no.6 0.25"' id="H10611"><p>H10611    SCREW, HEX HEAD, NO. 6 THREAD, 0.25" L STOCK</p></li>
+            <li class='socket 1/4"-20 1/2"' id="H10615"><p>H10615    SCREW, SOCKET HEAD, 1/4"-20 THREAD, 1/2"</p></li>
+            <li class='m4 0.7mm 35mm' id="H10616"><p>H10616    SCREW, SHOULDER BOLT, M4 X 0.7mm, 35mm</p></li>
+            <li class='round 10-16 1.00' id="H10618"><p>H10618    SCREW, ROUND HEAD, 10-16 THREAD, 1.00 IN</p></li>
+            <li class='pan phillip 4-40 3/8"' id="H20107"><p>H20107    SCREW, PAN HEAD, PHILLIPS 4-40 X 3/8" </p></li>
+            <li class='"' id="Q04C1356"><p>Q04C1356    SCREW, BTN HEX 1/4-20X3-1/2 BLK</p></li>
+        </ul>    
     </div>
-    
-    <div class="dropdown">
-        <button class="dropbtn">Length</button>
-        <div class="dropdown-content">
-            <a href="#" id="L1" onclick="selectedL1()" class="filter-button" data-filter='3/8"'>3/8"</a>
-            <a href="#" id="L2" onclick="selectedL2()" class="filter-button" data-filter= '1.25"'>1.25"</a>
-            <a href="#" id="L3" onclick="selectedL3()" class="filter-button" data-filter='1/2"'>1/2"</a>
-            <a href="#" id="L4" onclick="selectedL4()" class="filter-button" data-filter='1 1/4"'>1 1/4"</a>
-            <a href="#" id="L5" onclick="selectedL5()"> </a>
-            <a href="#" id="L6" onclick="selectedL6()"></a>
-        </div>
-    </div>
-
-    <div style="position: relative; display: inline-block;"><button class="enterbtn" onclick= "sortEnter()">Enter</button></div> 
-</div> 
-</div>
-
-
+</main>
+</body>
 <script>
-// Get the filter input and list elements
-const filterInput = document.getElementById('filterInput');
-const list = document.getElementById('list');
+    // Get the filter input and list elements
+    const filterInput = document.getElementById('filterInput');
+    const list = document.getElementById('list');
 
-// Add event listener for filter input
-filterInput.addEventListener('input', filterList);
+    // Add event listener for filter input
+    filterInput.addEventListener('input', filterList);
 
-// Function to filter the list based on the filter input
-function filterList() {
-  const filterValue = filterInput.value.toLowerCase();
-  const items = list.getElementsByTagName('li');
-  
-  Array.from(items).forEach(item => {
+    // Function to filter the list based on the filter input
+    function filterList() {
+    const filterValue = filterInput.value.toLowerCase();
+    const items = list.getElementsByTagName('li');
+    
+    Array.from(items).forEach(item => {
     const text = item.textContent.toLowerCase();
     if (text.includes(filterValue)) {
-      item.style.display = 'block'; // Show the item
+        item.style.display = 'block'; // Show the item
     } else {
-      item.style.display = 'none'; // Hide the item
+        item.style.display = 'none'; // Hide the item
     }
-  });
-}
-// Get the filter buttons and list elements
-const filterButtons = document.querySelectorAll('.filter-button');
-const listItems = document.querySelectorAll('#list li');
+    });
+    }
 
-// Add event listener for each filter button
-filterButtons.forEach(button => {
-  button.addEventListener('click', applyFilter);
-});
+    // Get the filter buttons and list elements
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const listItems = document.querySelectorAll('#list li');
 
-// Function to apply the filter
-function applyFilter() {
-  // Get the filter value from the data attribute
-  const filterValue = this.dataset.filter;
+    // Add event listener for each filter button
+    filterButtons.forEach(button => {
+        button.addEventListener('click', applyFilter);
+    });
 
-  // Show or hide items based on the filter value
-  listItems.forEach(item => {
+    // Function to apply the filter
+    function applyFilter() {
+    // Get the filter value from the data attribute
+    const filterValue = this.dataset.filter;
+
+    // Show or hide items based on the filter value
+    listItems.forEach(item => {
     if (filterValue === 'all') {
-      item.classList.remove('hide'); // Show all items
+        item.classList.remove('hide'); // Show all items
     } else if (item.classList.contains(filterValue)) {
-      item.classList.remove('hide'); // Show matching items
+        item.classList.remove('hide'); // Show matching items
     } else {
-      item.classList.add('hide'); // Hide non-matching items
+        item.classList.add('hide'); // Hide non-matching items
     }
-  });
+    });
 
-  // Remove active class from all buttons and add it to the clicked button
-  filterButtons.forEach(button => {
+    // Remove active class from all buttons and add it to the clicked button
+    filterButtons.forEach(button => {
     button.classList.remove('active');
-  });
-  this.classList.add('active');
-};
-
-
+    });
+    this.classList.add('active');
+    };   
 
     <!--variables for screws-->
     var thread = "?";
@@ -226,7 +221,7 @@ function applyFilter() {
         document.getElementById("partNum").innerHTML = 
         code;
     };
-   
+    
     update();
 
     function resetFunction(){
@@ -240,13 +235,11 @@ function applyFilter() {
         material = "?";
         tipType = "?";
         finish = "?";
-        code = "??????";
+        code = "?????";
         update();
     };
 
     resetFunction();
-
-  
     
     function sortEnter(){
         if (headType === 'PAN' && thread === '10-32' && length === '3/8"' ){
@@ -358,10 +351,5 @@ function applyFilter() {
         length = '1 1/4"'; 
         update();
     };
-
-
-
 </script>
-
-</body>
 </html>

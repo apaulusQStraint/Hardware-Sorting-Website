@@ -1,376 +1,124 @@
 <!DOCTYPE html>
-<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
-    <head>
-        <link rel="icon" type="image/x-icon" href="Pictures/favicon.png">    
-        <link rel="stylesheet" href="style.css">
-        <a href="index.html"><h1>Nuts</h1></a>    
-    
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Abigal Paulus</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
-<mso:ContentTypeId msdt:dt="string">0x01010074E1646AEC49D243943F95C343AA8B8A</mso:ContentTypeId>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
+<html lang="en">
+<head>
+    <title>Nuts</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
 </head>
 <body>
-
-    <header>
-        <a href="index.html">Home</a>
-        <a href="screws.html">Screws</a>
-        <a href="bolts.html">Bolts</a>
-        <a href="washers.html">Washers</a>
-        <a href="nuts.html">Nuts</a>
-        <a href="springs.html">Springs</a>
-        <a href="pins.html">Pins</a>
-        <a href="rivets.html">Rivets</a>
-        <a href="spacers.html">Spacers</a>
-        <a href="magnets.html">Magnets</a>
-        <a href="grommets.html">Grommets</a>
-        <a href="wire_terminals.html">Wire Terminals</a>
-        <a href="other.html">Other</a>
-    </header>   
-
-    <div style="float: right; padding-right: 250px; padding-left: 250px;">
-        <button class="filter-button" data-filter="all">All</button>
-        <input type="text" id="filterInput" placeholder="Filter">
-            <ul id="list" style="width:500px; overflow: auto; max-height: 725px; padding-right: 100px; list-style-type: square;">
-                <li class='lock distorted 7/16"-20 grade 2' id="C5-6502-2-2"><p>C5-6502-2-2   NUT, LOCK, DISTORTED, 7/16"-20, GR2 </p></li>
-                <li class='lock nylon 10-32' id="H00066"><p>H00066    NUT, LOCK, NYLON, 10-32 SS 18-8</p></li>
-                <li class='cap isolation' id="H00208"><p>H00208    NUT, CAP, ISOLATION HEX </p></li>
-                <li class='lock 5/16"-18 0.365"' id="H00219"><p>H00219    NUT, LOCK, 5/16"-18 THREAD, 0.365"L</p></li>
-                <li class='center-lock 5/8"-11 tall grade 8' id="H00241"><p>H00241    NUT, CENTERLOCK 5/8"-11, TALL GRADE 8</p></li>
-                <li class='lock nylon 10mm grade 8' id="H10186"><p>H10186    NUT, LOCK, HEX NYL, 10mm, GR 8</p></li>
-                <li class='nylon 1/4-20 grade 8' id="H10196"><p>H10196    NUT, LOCK, HEX NYL, 1/4-20, GR 8</p></li>
-                <li class='lock 5/16"-18 nylon' id="H10550"><p>H10550    NUT, LOCK, NYLON, 5/16"-18</p></li>
-                <li class='flanged serrated 1/4"-20' id="H30000"><p>H30000    NUT, FLG, SERRATED, 1/4"-20</p></li>
-                <li class='lock nylon 13x8mm' id="H30027"><p>H30027    NUT, LOCK, NYLON INSERT, M8x1.25mm</p></li>
-                <li class='lock m6x1 grade 10.9"' id="H30030"><p>H30030    NUT, LOCK, M6X1" ST, GR 10.9</p></li>
-                <li class='lock distorted m12 grade 8"' id="H30033"><p>H30033    NUT, LOCK, DISTORTED THD, M12, GR8</p></li>
-                <li class='weld 1/4"-20' id="Q04C1335"><p>Q04C1335     NUT, WELD HEX HEAD, 1/4"-20 ST</p></li>
-                <li class='weld 3/8"-16' id="Q04C1350"><p>Q04C1350     NUT, WELD HEX HEAD, 3/8"-16, ST</p></li>
-            </ul>
+<header>
+    <h1><a href="index.html">Hardware Sorting</a> | <a href="nuts.html">Nuts</a></h1>
+    <input type="text" id="filterInputAll" placeholder="&#x1F50E;&#xFE0E;  Search All">
+    <nav>
+    <ul>
+        <li><a href="index.html"><p>Home</p></a></li>
+        <li><a href="screws.html"><p>Screws</p></a></li>
+        <li><a href="bolts.html"><p>Bolts</p></a></li>
+        <li><a href="washers.html"><p>Washers</p></a></li>
+        <li><a href="nuts.html"><p>Nuts</p></a></li>
+        <li><a href="springs.html"><p>Springs</p></a></li>
+        <li><a href="pins.html"><p>Pins</p></a></li>
+        <li><a href="rivets.html"><p>Rivets</p></a></li>
+        <li><a href="spacers.html"><p>Spacers</p></a></li>
+        <li><a href="magnets.html"><p>Magnets</p></a></li>
+        <li><a href="grommets.html"><p>Grommets</p></a></li>
+        <li><a href="wire-terminals.html"><p>Wire Terminals</p></a></li>
+        <li><a href="other.html"><p>Other</p></a></li>
+    </ul>
+    </nav>
+</header>
+<main>
+    <div class="sort">
+        <div class="picture">
+            <img src="images/dim/nutDIM.jpg" alt="nut dim">
+            <img src="images/dim/nutDIM2.jpg" alt="nut dim">
         </div>
-            
-        <ul style="overflow: auto; max-height: 350px; list-style-type: none;">
-            <li><img src="Pictures/DIM Pics/Nut Dim.jpg" alt="nut-dim" style="width: 650px; "></li>
-            <li><img src="Pictures/DIM Pics/Nut Dim 2.jpg" alt="nut-dim" style="width: 650px; "></li>
-          </ul>
-          
-    <div style="float: left; padding-left: 100px; height: 300px;">    
-          <div><h2 style="padding-top: 25px;">Output</h2></div>
-          <div><p id="output"></p></div>
-          <div><h3>Part Code</h3></div>  
-          <div><p id="partNum" style="padding-bottom: 25px;"></p></div>
-      <div style="float: left; width: 650px;">
-    
-        <div style="position: relative; display: inline-block;">
+        <div class="info">
+            <div class="output">
+                <h2>Output</h2>
+                <p id="output"></p>
+                <h3>Part Code</h3>
+                <p id="partNum"></p>
+            </div>
+            <div class="input">
             <button class="resetbtn filter-button" onclick="resetFunction()" data-filter="all">Reset</button>
-        </div>
-    
-        <div class="dropdown">
-            <button class="dropbtn" id="show">Type</button>
-            <div class="dropdown-content">
-              <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="hex">Hex</a>
-              <a href="#" id="T2" onclick="selectedT2()" class="filter-button" data-filter="lock">Lock</a>
-              <a href="#" id="T3" onclick="selectedT3()" class="filter-button" data-filter="flanged">Flanged</a>
-              <a href="#" id="T4" onclick="selectedT4()" class="filter-button" data-filter="center-lock">Center-Lock</a>
-              <a href="#" id="T5" onclick="selectedT5()" class="filter-button" data-filter="weld">Weld</a>
-              <a href="#" id="T6" onclick="selectedT6()" class="filter-button" data-filter="cap">Cap</a>
+            <div class="dropdown">
+                <button class="dropbtn" id="show">Type</button>
+                <div class="dropdown-content">
+                  <a href="#" id="T1" onclick="selectedT1()" class="filter-button" data-filter="hex">Hex</a>
+                  <a href="#" id="T2" onclick="selectedT2()" class="filter-button" data-filter="lock">Lock</a>
+                  <a href="#" id="T3" onclick="selectedT3()" class="filter-button" data-filter="flanged">Flanged</a>
+                  <a href="#" id="T4" onclick="selectedT4()" class="filter-button" data-filter="center-lock">Center-Lock</a>
+                  <a href="#" id="T5" onclick="selectedT5()" class="filter-button" data-filter="weld">Weld</a>
+                  <a href="#" id="T6" onclick="selectedT6()" class="filter-button" data-filter="cap">Cap</a>
+                </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Lock Type</button>
+              <div class="dropdown-content">
+                <a href="#" id="LT1" onclick="selectedLT1()" class="filter-button" data-filter="nylon">Nylon Insert</a>
+                <a href="#" id="LT2" onclick="selectedLT2()" class="filter-button" data-filter="distorted">Distorted Thread</a>
+                <a href="#" id="LT3" onclick="selectedLT3()" class="filter-button" data-filter="serrated">Serrated</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Thread</button>
+              <div class="dropdown-content">
+                <a href="#" id="TH1" onclick="selectedTH1()" class="filter-button" data-filter='1/4"-20'>1/4"-20</a>
+                <a href="#" id="TH2" onclick="selectedTH2()" class="filter-button" data-filter='3/8"-16'>3/8"-16</a>
+                <a href="#" id="TH3" onclick="selectedTH3()" class="filter-button" data-filter='5/16"-18'>5/16"-18</a>
+                <a href="#" id="TH4" onclick="selectedTH4()" class="filter-button" data-filter='7/16"-20'>7/16"-20</a>
+                <a href="#" id="TH5" onclick="selectedTH5()" class="filter-button" data-filter='5/8"-11'>5/8"-11</a>
+                <a href="#" id="TH6" onclick="selectedTH6()" class="filter-button" data-filter='M6x1'>M6x1</a>
+                <a href="#" id="TH7" onclick="selectedTH7()" class="filter-button" data-filter='M8x1.25mm'>M8x1.25mm</a>
+                <a href="#" id="TH8" onclick="selectedTH8()" class="filter-button" data-filter='10mm'>10mm</a>
+                <a href="#" id="TH9" onclick="selectedTH9()" class="filter-button" data-filter='M12'>M12</a>
+              </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Length</button>
+                <div class="dropdown-content">
+                  <a href="#" id="L1" onclick="selectedL1()" class="filter-button" data-filter='0.365"'>0.365"</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Grade</button>
+                <div class="dropdown-content">
+                  <a href="#" id="G1" onclick="selectedG1()" class="filter-button" data-filter="2">2</a>
+                  <a href="#" id="G2" onclick="selectedG2()" class="filter-button" data-filter="8">8</a>
+                  <a href="#" id="G3" onclick="selectedG3()" class="filter-button" data-filter="10.9">10.9</a>
+                </div>
+            </div>
+            <button class="enterbtn" onclick= "sortEnter()">Enter</button>   
             </div>
         </div>
-    
-        <div class="dropdown">
-          <button class="dropbtn">Lock Type</button>
-          <div class="dropdown-content">
-            <a href="#" id="LT1" onclick="selectedLT1()" class="filter-button" data-filter="nylon">Nylon Insert</a>
-            <a href="#" id="LT2" onclick="selectedLT2()" class="filter-button" data-filter="distorted">Distorted Thread</a>
-            <a href="#" id="LT3" onclick="selectedLT3()" class="filter-button" data-filter="serrated">Serrated</a>
-          </div>
-        </div>
-        
-        <div class="dropdown">
-          <button class="dropbtn">Thread</button>
-          <div class="dropdown-content">
-            <a href="#" id="TH1" onclick="selectedTH1()" class="filter-button" data-filter='1/4"-20'>1/4"-20</a>
-            <a href="#" id="TH2" onclick="selectedTH2()" class="filter-button" data-filter='3/8"-16'>3/8"-16</a>
-            <a href="#" id="TH3" onclick="selectedTH3()" class="filter-button" data-filter='5/16"-18'>5/16"-18</a>
-            <a href="#" id="TH4" onclick="selectedTH4()" class="filter-button" data-filter='7/16"-20'>7/16"-20</a>
-            <a href="#" id="TH5" onclick="selectedTH5()" class="filter-button" data-filter='5/8"-11'>5/8"-11</a>
-            <a href="#" id="TH6" onclick="selectedTH6()" class="filter-button" data-filter='M6x1'>M6x1</a>
-            <a href="#" id="TH7" onclick="selectedTH7()" class="filter-button" data-filter='M8x1.25mm'>M8x1.25mm</a>
-            <a href="#" id="TH8" onclick="selectedTH8()" class="filter-button" data-filter='10mm'>10mm</a>
-            <a href="#" id="TH9" onclick="selectedTH9()" class="filter-button" data-filter='M12'>M12</a>
-          </div>
-        </div>
-
-        <div class="dropdown">
-            <button class="dropbtn">Length</button>
-            <div class="dropdown-content">
-              <a href="#" id="L1" onclick="selectedL1()" class="filter-button" data-filter='0.365"'>0.365"</a>
-            </div>
-        </div>
-
-      <div style="padding-top: 5px;">
-        <div class="dropdown">
-            <button class="dropbtn">Grade</button>
-            <div class="dropdown-content">
-              <a href="#" id="G1" onclick="selectedG1()" class="filter-button" data-filter="2">2</a>
-              <a href="#" id="G2" onclick="selectedG2()" class="filter-button" data-filter="8">8</a>
-              <a href="#" id="G3" onclick="selectedG3()" class="filter-button" data-filter="10.9">10.9</a>
-            </div>
-        </div>
-    
-        <div style="position: relative; display: inline-block;">
-          <button class="enterbtn" onclick= "sortEnter()">Enter</button>
-        </div> 
-      </div>
-      </div>
     </div>
-       
-    <script>
-    // Get the filter input and list elements
-    const filterInput = document.getElementById('filterInput');
-    const list = document.getElementById('list');
-    
-    // Add event listener for filter input
-    filterInput.addEventListener('input', filterList);
-    
-    // Function to filter the list based on the filter input
-    function filterList() {
-      const filterValue = filterInput.value.toLowerCase();
-      const items = list.getElementsByTagName('li');
-      
-      Array.from(items).forEach(item => {
-        const text = item.textContent.toLowerCase();
-        if (text.includes(filterValue)) {
-          item.style.display = 'block'; // Show the item
-        } else {
-          item.style.display = 'none'; // Hide the item
-        }
-      });
-    }
-    // Get the filter buttons and list elements
-    const filterButtons = document.querySelectorAll('.filter-button');
-    const listItems = document.querySelectorAll('#list li');
-    
-    // Add event listener for each filter button
-    filterButtons.forEach(button => {
-      button.addEventListener('click', applyFilter);
-    });
-    
-    // Function to apply the filter
-    function applyFilter() {
-      // Get the filter value from the data attribute
-      const filterValue = this.dataset.filter;
-    
-      // Show or hide items based on the filter value
-      listItems.forEach(item => {
-        if (filterValue === 'all') {
-          item.classList.remove('hide'); // Show all items
-        } else if (item.classList.contains(filterValue)) {
-          item.classList.remove('hide'); // Show matching items
-        } else {
-          item.classList.add('hide'); // Hide non-matching items
-        }
-      });
-    
-      // Remove active class from all buttons and add it to the clicked button
-      filterButtons.forEach(button => {
-        button.classList.remove('active');
-      });
-      this.classList.add('active');
-    };
-    
-        <!--variables for screws-->
-        var type = "?";
-        var lock = "?";
-        var thread = "?";
-        var grade = "?";
-        var length = "?";
-        var code = "?????";
-            
-        function update() {
-            document.getElementById("output").innerHTML = 
-            "NUT," + " " + type + ", " + lock + ", " + thread + ", " + length + ", " + grade;
-            document.getElementById("partNum").innerHTML = 
-            code;
-        };
-       
-        update();
-    
-        function resetFunction(){
-          type = "?";
-          lock = "?";
-          thread = "?";
-          grade = "?";
-          length = "?";
-          code = "?????";
-            update();
-        };
-    
-        resetFunction();    
-        
-        function sortEnter(){
-            if (type === 'LOCK' && lock === 'DISTORTED' && thread === '7/16"-20' && grade === 'GR 2' && length === '?'){
-                code = 'C5-6502-2-2';
-                update();
-              }else if (type === 'LOCK' && lock === 'NYLON' && thread === '10-32' && grade === '?' && length === '?'){
-                code = 'H00066';
-                update();
-              }else if (type === 'CAP' && lock === '?' && thread === '?' && grade === '?' && length === '?'){
-                code = 'H00208';
-                update();
-              }else if (type === 'LOCK' && lock === '?' && thread === '5/16"-18' && grade === '?' && length === '0.365 L'){
-                code = 'H00219';
-                update();
-              }else if (type === 'CENTERLOCK' && lock === '?' && thread === '5/8"-11' && grade === 'GR 8' && length === '?'){
-                code = 'H00241';
-                update();
-              }else if (type === 'LOCK' && lock === 'NYLON' && thread === '10mm' && grade === 'GR 8' && length === '?'){
-                code = 'H10186';
-                update();
-              }else if (type === 'LOCK' && lock === 'NYLON' && thread === '1/4-20' && grade === 'GR 8' && length === '?'){
-                code = 'H10196';
-                update();
-              }else if (type === 'LOCK' && lock === 'NYLON' && thread === '5/16"-18' && grade === '?' && length === '?'){
-                code = 'H10550';
-                update();
-              }else if (type === 'FLANGED' && lock === 'SERRATED' && thread === '1/4"-20' && grade === '?' && length === '?'){
-                code = 'H30000';
-                update();
-              }else if (type === 'LOCK' && lock === 'NYLON' && thread === 'M8x1.25mm' && grade === '?' && length === '?'){
-                code = 'H30027';
-                update();
-              }else if (type === 'LOCK' && lock === '?' && thread === 'M6X1"' && grade === 'GR 10.9' && length === '?'){
-                code = 'H30030';
-                update();
-              }else if (type === 'LOCK' && lock === 'DISTORTED' && thread === 'M12' && grade === 'GR 8' && length === '?'){
-                code = 'H30033';
-                update();
-              }else if (type === 'WELD' && lock === '?' && thread === '1/4"-20' && grade === '?' && length === '?'){
-                code = 'Q04C1335';
-                update();
-              }else if (type === 'WELD' && lock === '?' && thread === '3/8"-16' && grade === '?' && length === '?'){
-                code = 'Q04C1350';
-                update();
-            }else
-                code = "xxxxx";
-                update();
-        };
-    
-        function  selectedT1() {
-            type = 'HEX' 
-            update();
-        }; 
-        
-        function  selectedT2() {
-            type = "LOCK"; 
-            update();
-        }; 
-        
-        function  selectedT3() {
-            type = "FLANGED"; 
-            update();
-        }; 
-        
-        function  selectedT4() {
-            type = "CENTER-LOCK"; 
-            update();
-        }; 
-        
-        function  selectedT5() {
-            type = "WELD"; 
-            update();
-        }; 
-        
-        function  selectedT6() {
-            type = "CAP"; 
-            update();
-        }; 
-        
-        function  selectedLT1() {
-            lock = "NYLON"; 
-            update();
-        };         
-        
-        function  selectedLT2() {
-            lock = "DISTORTED"; 
-            update();
-        }; 
-    
-        function  selectedLT3() {
-            lock = "SERRATED"; 
-            update();
-        }; 
+    <div class="search">
+        <div class="top">
+            <button class="filter-button" data-filter="all">All</button>
+            <input type="text" id="filterInput" placeholder="Filter">
+        </div>
+        <ul class="list">
+            <li class='lock distorted 7/16"-20 grade 2' id="C5-6502-2-2"><p>C5-6502-2-2   NUT, LOCK, DISTORTED, 7/16"-20, GR2 </p></li>
+            <li class='lock nylon 10-32' id="H00066"><p>H00066    NUT, LOCK, NYLON, 10-32 SS 18-8</p></li>
+            <li class='cap isolation' id="H00208"><p>H00208    NUT, CAP, ISOLATION HEX </p></li>
+            <li class='lock 5/16"-18 0.365"' id="H00219"><p>H00219    NUT, LOCK, 5/16"-18 THREAD, 0.365"L</p></li>
+            <li class='center-lock 5/8"-11 tall grade 8' id="H00241"><p>H00241    NUT, CENTERLOCK 5/8"-11, TALL GRADE 8</p></li>
+            <li class='lock nylon 10mm grade 8' id="H10186"><p>H10186    NUT, LOCK, HEX NYL, 10mm, GR 8</p></li>
+            <li class='nylon 1/4-20 grade 8' id="H10196"><p>H10196    NUT, LOCK, HEX NYL, 1/4-20, GR 8</p></li>
+            <li class='lock 5/16"-18 nylon' id="H10550"><p>H10550    NUT, LOCK, NYLON, 5/16"-18</p></li>
+            <li class='flanged serrated 1/4"-20' id="H30000"><p>H30000    NUT, FLG, SERRATED, 1/4"-20</p></li>
+            <li class='lock nylon 13x8mm' id="H30027"><p>H30027    NUT, LOCK, NYLON INSERT, M8x1.25mm</p></li>
+            <li class='lock m6x1 grade 10.9"' id="H30030"><p>H30030    NUT, LOCK, M6X1" ST, GR 10.9</p></li>
+            <li class='lock distorted m12 grade 8"' id="H30033"><p>H30033    NUT, LOCK, DISTORTED THD, M12, GR8</p></li>
+            <li class='weld 1/4"-20' id="Q04C1335"><p>Q04C1335     NUT, WELD HEX HEAD, 1/4"-20 ST</p></li>
+            <li class='weld 3/8"-16' id="Q04C1350"><p>Q04C1350     NUT, WELD HEX HEAD, 3/8"-16, ST</p></li>
+        </ul>    
+    </div>
 
-        function  selectedTH1() {
-            thread = '1/4"-20'; 
-            update();
-        }; 
-        
-        function  selectedTH2() {
-            thread = '3/8"-16'; 
-            update();
-        }; 
-
-        function  selectedTH3() {
-            thread = '5/16"-18'; 
-            update();
-        }; 
-
-        function  selectedTH4() {
-            thread = '7/16"-20'; 
-            update();
-        }; 
-        
-        function  selectedTH5() {
-            thread = '5/8"-11'; 
-            update();
-        }; 
-
-        function  selectedTH6() {
-            thread = 'M6x1"'; 
-            update();
-        }; 
-
-        function  selectedTH7() {
-            thread = 'M8x1.25mm'; 
-            update();
-        }; 
-        
-        function  selectedTH8() {
-            thread = '10mm'; 
-            update();
-        }; 
-
-        function  selectedTH9() {
-            thread = 'M12'; 
-            update();
-        }; 
-
-        function  selectedL1() {
-            length = '0.365" L'; 
-            update();
-        }; 
-
-        function  selectedG1() {
-            grade = "GR 2"; 
-            update();
-        }; 
-
-        function  selectedG2() {
-            grade = "GR 8"; 
-            update();
-        }; 
-
-        function  selectedG3() {
-            grade = "GR 10.9"; 
-            update();
-        }; 
-
-
-    </script>
-    
-    </body>
-    </html>
+</main>
+</body>
+</html>
