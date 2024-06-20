@@ -71,6 +71,9 @@ header nav li{
 	margin-right: 5px;
 	padding: 0px 10px;
 }
+header nav li a *{
+	color: white;
+}
 
 header nav li a{
 	display: flex;
@@ -85,8 +88,11 @@ header nav li a p{
 	margin: auto;
 }
 
-header nav a:hover {
+header nav a *:hover {
 	color: #646496;
+}
+
+header nav a:hover {
 	background-color: transparent;
 	border: 1px solid #556e7800;
 	border-bottom: 4px solid #646496;
